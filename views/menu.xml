@@ -47,7 +47,8 @@
                   parent="menu_param_content"
                   sequence="5" />
 				  
-				  <!-- Un autre commentaire de test -->
+				  <!-- essai de mettre un commentaire -->
+
 
 
         <!--<menuitem id="ecole_update" name="TEST" action="studentupdate" parent="menu_school_content" sequence="9" />-->
