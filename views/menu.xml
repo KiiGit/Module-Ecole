@@ -46,6 +46,8 @@
                   action="ecole.halfpension_place"
                   parent="menu_param_content"
                   sequence="5" />
+				  
+				  <!-- -->
 
 
         <!--<menuitem id="ecole_update" name="TEST" action="studentupdate" parent="menu_school_content" sequence="9" />-->
