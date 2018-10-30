@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+<!-- action qui fait référence à la vue school_years_view_id-->
+        <record model='ir.actions.act_window' id='ecole.anneescolairelist'>
+            <field name="name">List of school years</field>
+            <field name="res_model">ecole.partner.school.years</field>
+            <field name="view_mode">tree,form</field>
+	    </record>
+
+    <!-- Vue Tree années scolaires -->
+        <record model="ir.ui.view" id="school_years_view_tree">
+            <field name="name">school.years.view.tree</field>
+            <field name="model">ecole.partner.school.years</field>
+            <field name="arch" type="xml">
+                <tree string="Tree_years_school">
+                    <field name="school_years" />
+                    <field name="year_begin_date" />
+                    <field name="year_end_date" />
+                    <field name="default_school_year" />
+                    <field name="period_school_year" />
+                </tree>
+            </field>
+        </record>
+
+            <!-- Vue Form années scolaires -->
+        <record model="ir.ui.view" id="school_years_view_id_form">
+            <field name="name">school.years.view.form</field>
+            <field name="model">ecole.partner.school.years</field>
+            <field name="arch" type="xml">
+                <form string="Form_years_school">
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                                <field name="active" widget="boolean_button" options="{'terminology': 'archive'}"/>
+                            </button>
+                        </div>
+                        <group col="1">
+                            <field name="school_years" placeholder="20xx - 20xx" />
+                        </group>
+                        <group col="2">
+                            <field name="default_school_year" />
+                            <field name="period_school_year" />
+                            <field name="year_begin_date" />
+                            <field name="year_end_date" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+</odoo>

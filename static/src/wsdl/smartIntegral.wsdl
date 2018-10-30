@@ -1,0 +1,5001 @@
+<?xml version="1.0" encoding="utf8" ?>
+ <wsdl:definitions xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://horanet.com" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="http://horanet.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+ <wsdl:types>
+ <s:schema elementFormDefault="qualified" targetNamespace="http://horanet.com">
+  <s:import namespace="http://www.w3.org/2001/XMLSchema"/>
+ <s:element name="AffecterUneClasse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="IdUsager" type="s:string" />
+  <s:element minOccurs="0" maxOccurs="1" name="IdClasse" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="AffecterUneClasseResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="AffecterUneClasseResult" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="AffecterRemplacerSupport">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="IdPorteur" type="s:string" />
+  <s:element minOccurs="1" maxOccurs="1" name="NumeroAncienSupport" type="s:int" />
+  <s:element minOccurs="1" maxOccurs="1" name="NumeroNouveauSupport" type="s:int" />
+  <s:element minOccurs="1" maxOccurs="1" name="technologie" type="s:int" />
+  <s:element minOccurs="1" maxOccurs="1" name="categorie" type="s:int" />
+  <s:element minOccurs="1" maxOccurs="1" name="ListeNoire" type="s:int" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="AffecterRemplacerSupportResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="AffecterRemplacerSupportResult" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="AjouterUneClasse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="IdClasse" type="s:string" />
+  <s:element minOccurs="0" maxOccurs="1" name="IdEtablissement" type="s:string" />
+  <s:element minOccurs="0" maxOccurs="1" name="Nom" type="s:string" />
+  <s:element minOccurs="0" maxOccurs="1" name="Informations" type="s:string" />
+  <s:element minOccurs="0" maxOccurs="1" name="IdExterneClasse" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="AjouterUneClasseResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="AjouterUneClasseResult" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="AjouterUnEtablissementScolaire">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="IdEtablissement" type="s:string" />
+  <s:element minOccurs="0" maxOccurs="1" name="Nom" type="s:string" />
+  <s:element minOccurs="0" maxOccurs="1" name="Adresse1" type="s:string" />
+  <s:element minOccurs="0" maxOccurs="1" name="Adresse2" type="s:string" />
+  <s:element minOccurs="0" maxOccurs="1" name="Adresse3" type="s:string" />
+  <s:element minOccurs="0" maxOccurs="1" name="Telephone1" type="s:string" />
+  <s:element minOccurs="0" maxOccurs="1" name="Telephone2" type="s:string" />
+  <s:element minOccurs="0" maxOccurs="1" name="Fax" type="s:string" />
+  <s:element minOccurs="0" maxOccurs="1" name="Courriel" type="s:string" />
+  <s:element minOccurs="0" maxOccurs="1" name="Informations" type="s:string" />
+  <s:element minOccurs="0" maxOccurs="1" name="CodePostal" type="s:string" />
+  <s:element minOccurs="0" maxOccurs="1" name="Ville" type="s:string" />
+  <s:element minOccurs="1" maxOccurs="1" name="CodePays" type="s:int" />
+  <s:element minOccurs="0" maxOccurs="1" name="NumeroEtablissement" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="AjouterUnEtablissementScolaireResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="AjouterUnEtablissementScolaireResult" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlAjouterComptes">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="donneesXml" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlAjouterComptesResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="XmlAjouterComptesResult" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlAjouterContrats">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="donneesXml" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlAjouterContratsResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="XmlAjouterContratsResult" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlAjouterContratsV2">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="donneesXml" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlAjouterContratsV2Response">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="XmlAjouterContratsV2Result" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlAjouterCreditsCompte">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="donneesXml" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlAjouterCreditsCompteResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="XmlAjouterCreditsCompteResult" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlAjouterDebitsCompte">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="donneesXml" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlAjouterDebitsCompteResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="XmlAjouterDebitsCompteResult" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlAjouterLiensContratsTerminaux">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="donneesXml" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlAjouterLiensContratsTerminauxResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="XmlAjouterLiensContratsTerminauxResult" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="AjouterLienUsagerTitulaire">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="IdUsager" type="s:string" />
+  <s:element minOccurs="0" maxOccurs="1" name="IdTitulaire" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="AjouterLienUsagerTitulaireResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="AjouterLienUsagerTitulaireResult" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlAjouterInscriptions">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="donneesXml" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlAjouterInscriptionsResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="XmlAjouterInscriptionsResult" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlAjouterResponsables">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="donneesXml" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlAjouterResponsablesResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="XmlAjouterResponsablesResult" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlAjouterTitulaire">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="donneesXml" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlAjouterTitulaireResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="XmlAjouterTitulaireResult" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlAjouterUsager">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="donneesXml" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlAjouterUsagerResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="XmlAjouterUsagerResult" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlCommanderLotSupports">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="donneesXml" type="s:string" />
+  <s:element minOccurs="1" maxOccurs="1" name="typeTraitement" type="s:int" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlCommanderLotSupportsResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="XmlCommanderLotSupportsResult" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlComptesTitulaire">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="titulaireId" type="s:string" />
+  <s:element minOccurs="1" maxOccurs="1" name="codeCentreGestion" type="s:int" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlComptesTitulaireResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="XmlComptesTitulaireResult" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="DsComptesTitulaire">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="titulaireId" type="s:string" />
+  <s:element minOccurs="1" maxOccurs="1" name="codeCentreGestion" type="s:int" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="DsComptesTitulaireResponse">
+ <s:complexType>
+ <s:sequence>
+ <s:element minOccurs="0" maxOccurs="1" name="DsComptesTitulaireResult">
+ <s:complexType>
+ <s:sequence>
+  <s:element ref="s:schema" />
+  <s:any />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlConsommationsComptesTitulaire">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="titulaireId" type="s:string" />
+  <s:element minOccurs="0" maxOccurs="1" name="UsagerId" type="s:string" />
+  <s:element minOccurs="1" maxOccurs="1" name="DateDebutPeriode" type="s:dateTime" />
+  <s:element minOccurs="1" maxOccurs="1" name="DateFinPeriode" type="s:dateTime" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlConsommationsComptesTitulaireResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="XmlConsommationsComptesTitulaireResult" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="testAppel">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="titulaireId" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="testAppelResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="testAppelResult" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="DsConsommationsComptesTitulaire">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="titulaireId" type="s:string" />
+  <s:element minOccurs="0" maxOccurs="1" name="UsagerId" type="s:string" />
+  <s:element minOccurs="1" maxOccurs="1" name="DateDebutPeriode" type="s:dateTime" />
+  <s:element minOccurs="1" maxOccurs="1" name="DateFinPeriode" type="s:dateTime" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="DsConsommationsComptesTitulaireResponse">
+ <s:complexType>
+ <s:sequence>
+ <s:element minOccurs="0" maxOccurs="1" name="DsConsommationsComptesTitulaireResult">
+ <s:complexType>
+ <s:sequence>
+  <s:element ref="s:schema" />
+  <s:any />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlConsommationsComptesTitulaireParCentreGestion">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="titulaireId" type="s:string" />
+  <s:element minOccurs="0" maxOccurs="1" name="UsagerId" type="s:string" />
+  <s:element minOccurs="1" maxOccurs="1" name="DateDebutPeriode" type="s:dateTime" />
+  <s:element minOccurs="1" maxOccurs="1" name="DateFinPeriode" type="s:dateTime" />
+  <s:element minOccurs="1" maxOccurs="1" name="CodeCentreGestion" type="s:int" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlConsommationsComptesTitulaireParCentreGestionResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="XmlConsommationsComptesTitulaireParCentreGestionResult" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="DsConsommationsComptesTitulaireParCentreGestion">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="titulaireId" type="s:string" />
+  <s:element minOccurs="0" maxOccurs="1" name="UsagerId" type="s:string" />
+  <s:element minOccurs="1" maxOccurs="1" name="DateDebutPeriode" type="s:dateTime" />
+  <s:element minOccurs="1" maxOccurs="1" name="DateFinPeriode" type="s:dateTime" />
+  <s:element minOccurs="1" maxOccurs="1" name="CodeCentreGestion" type="s:int" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="DsConsommationsComptesTitulaireParCentreGestionResponse">
+ <s:complexType>
+ <s:sequence>
+ <s:element minOccurs="0" maxOccurs="1" name="DsConsommationsComptesTitulaireParCentreGestionResult">
+ <s:complexType>
+ <s:sequence>
+  <s:element ref="s:schema" />
+  <s:any />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlDonnerGUID">
+  <s:complexType />
+  </s:element>
+ <s:element name="XmlDonnerGUIDResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="XmlDonnerGUIDResult" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="DsDonnerGUID">
+  <s:complexType />
+  </s:element>
+ <s:element name="DsDonnerGUIDResponse">
+ <s:complexType>
+ <s:sequence>
+ <s:element minOccurs="0" maxOccurs="1" name="DsDonnerGUIDResult">
+ <s:complexType>
+ <s:sequence>
+  <s:element ref="s:schema" />
+  <s:any />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="DonnerIdCVQ">
+  <s:complexType />
+  </s:element>
+ <s:element name="DonnerIdCVQResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="DonnerIdCVQResult" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlAjouterUnEvenement">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="1" maxOccurs="1" name="Synchrone" type="s:int" />
+  <s:element minOccurs="0" maxOccurs="1" name="donneesXml" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlAjouterUnEvenementResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="1" maxOccurs="1" name="XmlAjouterUnEvenementResult" type="s:int" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XMLInfoEvtAsync">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="1" maxOccurs="1" name="numeroEvt" type="s:int" />
+  <s:element minOccurs="0" maxOccurs="1" name="codeFournisseur" type="s:string" />
+  <s:element minOccurs="1" maxOccurs="1" name="dateDebut" type="s:dateTime" />
+  <s:element minOccurs="1" maxOccurs="1" name="dateFin" type="s:dateTime" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XMLInfoEvtAsyncResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="XMLInfoEvtAsyncResult" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlInfoActeur">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="ActeurId" type="s:string" />
+  <s:element minOccurs="1" maxOccurs="1" name="NumSerie" type="s:int" />
+  <s:element minOccurs="1" maxOccurs="1" name="TechnologieSupport" type="s:int" />
+  <s:element minOccurs="1" maxOccurs="1" name="CodeApplication" type="s:int" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlInfoActeurResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="XmlInfoActeurResult" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlInfoActeurV2">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="ActeurId" type="s:string" />
+  <s:element minOccurs="0" maxOccurs="1" name="NumSerie" type="s:string" />
+  <s:element minOccurs="1" maxOccurs="1" name="TechnologieSupport" type="s:int" />
+  <s:element minOccurs="1" maxOccurs="1" name="CodeApplication" type="s:int" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlInfoActeurV2Response">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="XmlInfoActeurV2Result" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlInfoActeurNumSerie">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="1" maxOccurs="1" name="NumSerie" type="s:int" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlInfoActeurNumSerieResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="XmlInfoActeurNumSerieResult" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlInfoActeurNumSerieV2">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="NumSerie" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlInfoActeurNumSerieV2Response">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="XmlInfoActeurNumSerieV2Result" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlInfoActeurId">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="IdActeur" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlInfoActeurIdResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="XmlInfoActeurIdResult" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlInfoContrats">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="UsagerId" type="s:string" />
+  <s:element minOccurs="1" maxOccurs="1" name="DateDebutPeriode" type="s:dateTime" />
+  <s:element minOccurs="1" maxOccurs="1" name="DateFinPeriode" type="s:dateTime" />
+  <s:element minOccurs="0" maxOccurs="1" name="NumeroSerie" type="s:string" />
+  <s:element minOccurs="1" maxOccurs="1" name="Technologie" type="s:int" />
+  <s:element minOccurs="1" maxOccurs="1" name="NumeroContrat" type="s:int" />
+  <s:element minOccurs="1" maxOccurs="1" name="ContratsActifs" type="s:int" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlInfoContratsResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="XmlInfoContratsResult" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="DsInfoContrats">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="UsagerId" type="s:string" />
+  <s:element minOccurs="1" maxOccurs="1" name="DateDebutPeriode" type="s:dateTime" />
+  <s:element minOccurs="1" maxOccurs="1" name="DateFinPeriode" type="s:dateTime" />
+  <s:element minOccurs="0" maxOccurs="1" name="NumeroSerie" type="s:string" />
+  <s:element minOccurs="1" maxOccurs="1" name="Technologie" type="s:int" />
+  <s:element minOccurs="1" maxOccurs="1" name="NumeroContrat" type="s:int" />
+  <s:element minOccurs="1" maxOccurs="1" name="ContratsActifs" type="s:int" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="DsInfoContratsResponse">
+ <s:complexType>
+ <s:sequence>
+ <s:element minOccurs="0" maxOccurs="1" name="DsInfoContratsResult">
+ <s:complexType>
+ <s:sequence>
+  <s:element ref="s:schema" />
+  <s:any />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlInfoInscriptionsContrats">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="titulaireId" type="s:string" />
+  <s:element minOccurs="0" maxOccurs="1" name="UsagerId" type="s:string" />
+  <s:element minOccurs="1" maxOccurs="1" name="DateDebutPeriode" type="s:dateTime" />
+  <s:element minOccurs="1" maxOccurs="1" name="DateFinPeriode" type="s:dateTime" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlInfoInscriptionsContratsResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="XmlInfoInscriptionsContratsResult" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="DsInfoInscriptionsContrats">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="titulaireId" type="s:string" />
+  <s:element minOccurs="0" maxOccurs="1" name="UsagerId" type="s:string" />
+  <s:element minOccurs="1" maxOccurs="1" name="DateDebutPeriode" type="s:dateTime" />
+  <s:element minOccurs="1" maxOccurs="1" name="DateFinPeriode" type="s:dateTime" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="DsInfoInscriptionsContratsResponse">
+ <s:complexType>
+ <s:sequence>
+ <s:element minOccurs="0" maxOccurs="1" name="DsInfoInscriptionsContratsResult">
+ <s:complexType>
+ <s:sequence>
+  <s:element ref="s:schema" />
+  <s:any />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlInfoPrestations">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="1" maxOccurs="1" name="CodeService" type="s:int" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlInfoPrestationsResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="XmlInfoPrestationsResult" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="DsInfoPrestations">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="1" maxOccurs="1" name="CodeService" type="s:int" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="DsInfoPrestationsResponse">
+ <s:complexType>
+ <s:sequence>
+ <s:element minOccurs="0" maxOccurs="1" name="DsInfoPrestationsResult">
+ <s:complexType>
+ <s:sequence>
+  <s:element ref="s:schema" />
+  <s:any />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlInfosQuotients">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="IdTitulaire" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlInfosQuotientsResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="XmlInfosQuotientsResult" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="DsInfosQuotients">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="IdTitulaire" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="DsInfosQuotientsResponse">
+ <s:complexType>
+ <s:sequence>
+ <s:element minOccurs="0" maxOccurs="1" name="DsInfosQuotientsResult">
+ <s:complexType>
+ <s:sequence>
+  <s:element ref="s:schema" />
+  <s:any />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="DsInfosReglements">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="1" maxOccurs="1" name="CodeCentreGestion" type="s:int" />
+  <s:element minOccurs="0" maxOccurs="1" name="IdTitulaire" type="s:string" />
+  <s:element minOccurs="1" maxOccurs="1" name="NumeroCompte" type="s:int" />
+  <s:element minOccurs="1" maxOccurs="1" name="DateDebutPeriode" type="s:dateTime" />
+  <s:element minOccurs="1" maxOccurs="1" name="DateFinPeriode" type="s:dateTime" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="DsInfosReglementsResponse">
+ <s:complexType>
+ <s:sequence>
+ <s:element minOccurs="0" maxOccurs="1" name="DsInfosReglementsResult">
+ <s:complexType>
+ <s:sequence>
+  <s:element ref="s:schema" />
+  <s:any />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlInfosReglements">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="1" maxOccurs="1" name="CodeCentreGestion" type="s:int" />
+  <s:element minOccurs="0" maxOccurs="1" name="IdTitulaire" type="s:string" />
+  <s:element minOccurs="1" maxOccurs="1" name="NumeroCompte" type="s:int" />
+  <s:element minOccurs="1" maxOccurs="1" name="DateDebutPeriode" type="s:dateTime" />
+  <s:element minOccurs="1" maxOccurs="1" name="DateFinPeriode" type="s:dateTime" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlInfosReglementsResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="XmlInfosReglementsResult" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="DsInfoServices">
+  <s:complexType />
+  </s:element>
+ <s:element name="DsInfoServicesResponse">
+ <s:complexType>
+ <s:sequence>
+ <s:element minOccurs="0" maxOccurs="1" name="DsInfoServicesResult">
+ <s:complexType>
+ <s:sequence>
+  <s:element ref="s:schema" />
+  <s:any />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlInfoSupportsActeur">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="IdActeur" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlInfoSupportsActeurResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="XmlInfoSupportsActeurResult" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlInfoTitulaire">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="titulaireId" type="s:string" />
+  <s:element minOccurs="0" maxOccurs="1" name="usagerId" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlInfoTitulaireResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="XmlInfoTitulaireResult" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="DsInfoTitulaire">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="titulaireId" type="s:string" />
+  <s:element minOccurs="0" maxOccurs="1" name="usagerId" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="DsInfoTitulaireResponse">
+ <s:complexType>
+ <s:sequence>
+ <s:element minOccurs="0" maxOccurs="1" name="DsInfoTitulaireResult">
+ <s:complexType>
+ <s:sequence>
+  <s:element ref="s:schema" />
+  <s:any />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlInfoVersionBaseDonnees">
+  <s:complexType />
+  </s:element>
+ <s:element name="XmlInfoVersionBaseDonneesResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="XmlInfoVersionBaseDonneesResult" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="DsInfoVersionBaseDonnees">
+  <s:complexType />
+  </s:element>
+ <s:element name="DsInfoVersionBaseDonneesResponse">
+ <s:complexType>
+ <s:sequence>
+ <s:element minOccurs="0" maxOccurs="1" name="DsInfoVersionBaseDonneesResult">
+ <s:complexType>
+ <s:sequence>
+  <s:element ref="s:schema" />
+  <s:any />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XMLInfoServeurPresent">
+  <s:complexType />
+  </s:element>
+ <s:element name="XMLInfoServeurPresentResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="XMLInfoServeurPresentResult" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="DsInfoServeurPresent">
+  <s:complexType />
+  </s:element>
+ <s:element name="DsInfoServeurPresentResponse">
+ <s:complexType>
+ <s:sequence>
+ <s:element minOccurs="0" maxOccurs="1" name="DsInfoServeurPresentResult">
+ <s:complexType>
+ <s:sequence>
+  <s:element ref="s:schema" />
+  <s:any />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="IDescenteBambiTerm">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="Nom" type="s:string" />
+  <s:element minOccurs="0" maxOccurs="1" name="Prenom" type="s:string" />
+  <s:element minOccurs="0" maxOccurs="1" name="IdExterneUsager" type="s:string" />
+  <s:element minOccurs="1" maxOccurs="1" name="PresentService1" type="s:int" />
+  <s:element minOccurs="1" maxOccurs="1" name="PresentService2" type="s:int" />
+  <s:element minOccurs="1" maxOccurs="1" name="PresentService3" type="s:int" />
+  <s:element minOccurs="1" maxOccurs="1" name="PresentService4" type="s:int" />
+  <s:element minOccurs="1" maxOccurs="1" name="PresentService5" type="s:int" />
+  <s:element minOccurs="1" maxOccurs="1" name="PresentService6" type="s:int" />
+  <s:element minOccurs="1" maxOccurs="1" name="PresentService7" type="s:int" />
+  <s:element minOccurs="1" maxOccurs="1" name="PresentService8" type="s:int" />
+  <s:element minOccurs="1" maxOccurs="1" name="PresentService9" type="s:int" />
+  <s:element minOccurs="0" maxOccurs="1" name="libelleService1" type="s:string" />
+  <s:element minOccurs="0" maxOccurs="1" name="libelleService2" type="s:string" />
+  <s:element minOccurs="0" maxOccurs="1" name="libelleService3" type="s:string" />
+  <s:element minOccurs="0" maxOccurs="1" name="libelleService4" type="s:string" />
+  <s:element minOccurs="0" maxOccurs="1" name="libelleService5" type="s:string" />
+  <s:element minOccurs="0" maxOccurs="1" name="libelleService6" type="s:string" />
+  <s:element minOccurs="0" maxOccurs="1" name="libelleService7" type="s:string" />
+  <s:element minOccurs="0" maxOccurs="1" name="libelleService8" type="s:string" />
+  <s:element minOccurs="0" maxOccurs="1" name="libelleService9" type="s:string" />
+  <s:element minOccurs="0" maxOccurs="1" name="ClasseScolaire" type="s:string" />
+  <s:element minOccurs="1" maxOccurs="1" name="DateDemande" type="s:dateTime" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="IDescenteBambiTermResponse">
+  <s:complexType />
+  </s:element>
+ <s:element name="InfosParamsServices">
+  <s:complexType />
+  </s:element>
+ <s:element name="InfosParamsServicesResponse">
+ <s:complexType>
+ <s:sequence>
+ <s:element minOccurs="0" maxOccurs="1" name="InfosParamsServicesResult">
+ <s:complexType>
+ <s:sequence>
+  <s:element ref="s:schema" />
+  <s:any />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="ImporterLignesFacturation">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="idApplication" type="s:string" />
+  <s:element minOccurs="0" maxOccurs="1" name="produitsAImporter" type="s:string" />
+  <s:element minOccurs="1" maxOccurs="1" name="DateDebut" type="s:dateTime" />
+  <s:element minOccurs="1" maxOccurs="1" name="DateFin" type="s:dateTime" />
+  <s:element minOccurs="0" maxOccurs="1" name="CodeCarteUsager" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="ImporterLignesFacturationResponse">
+  <s:complexType />
+  </s:element>
+ <s:element name="lignesFacturations">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="idApplication" type="s:string" />
+  <s:element minOccurs="0" maxOccurs="1" name="produitsAImporter" type="s:string" />
+  <s:element minOccurs="1" maxOccurs="1" name="DateDebut" type="s:dateTime" />
+  <s:element minOccurs="1" maxOccurs="1" name="DateFin" type="s:dateTime" />
+  <s:element minOccurs="0" maxOccurs="1" name="CodeCarteUsager" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="lignesFacturationsResponse">
+ <s:complexType>
+ <s:sequence>
+ <s:element minOccurs="0" maxOccurs="1" name="lignesFacturationsResult">
+ <s:complexType>
+ <s:sequence>
+  <s:element ref="s:schema" />
+  <s:any />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="DsListeUsagers">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="titulaireId" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="DsListeUsagersResponse">
+ <s:complexType>
+ <s:sequence>
+ <s:element minOccurs="0" maxOccurs="1" name="DsListeUsagersResult">
+ <s:complexType>
+ <s:sequence>
+  <s:element ref="s:schema" />
+  <s:any />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlListeUsagers">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="titulaireId" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlListeUsagersResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="XmlListeUsagersResult" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="MAJStatutTraitementPartenaire">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="pTypeTraitement" type="s:string" />
+  <s:element minOccurs="0" maxOccurs="1" name="pCodeTraitement" type="s:string" />
+  <s:element minOccurs="1" maxOccurs="1" name="pStatut" type="s:int" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="MAJStatutTraitementPartenaireResponse">
+  <s:complexType />
+  </s:element>
+ <s:element name="XmlRechercherActeurs">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="NomActeur" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlRechercherActeursResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="XmlRechercherActeursResult" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlRechercherActeursNiv">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="NomActeur" type="s:string" />
+  <s:element minOccurs="1" maxOccurs="1" name="Niveau" type="s:int" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlRechercherActeursNivResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="XmlRechercherActeursNivResult" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="AjouterUneTransactionTerminal">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="1" maxOccurs="1" name="CodeTerminal" type="s:int" />
+  <s:element minOccurs="1" maxOccurs="1" name="DateTransaction" type="s:dateTime" />
+  <s:element minOccurs="0" maxOccurs="1" name="IdUsager" type="s:string" />
+  <s:element minOccurs="1" maxOccurs="1" name="CodeContrat" type="s:int" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="AjouterUneTransactionTerminalResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="AjouterUneTransactionTerminalResult" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlRegulariserTransaction">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="1" maxOccurs="1" name="dateTransaction" type="s:dateTime" />
+  <s:element minOccurs="1" maxOccurs="1" name="codeTerminal" type="s:int" />
+  <s:element minOccurs="0" maxOccurs="1" name="idUniqueContrat" type="s:string" />
+  <s:element minOccurs="1" maxOccurs="1" name="codeTransaction" type="s:int" />
+  <s:element minOccurs="1" maxOccurs="1" name="creationOuSuppression" type="s:int" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlRegulariserTransactionResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="XmlRegulariserTransactionResult" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="RegulariserTransaction">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="1" maxOccurs="1" name="dateTransaction" type="s:dateTime" />
+  <s:element minOccurs="1" maxOccurs="1" name="codeTerminal" type="s:int" />
+  <s:element minOccurs="0" maxOccurs="1" name="idUniqueContrat" type="s:string" />
+  <s:element minOccurs="1" maxOccurs="1" name="codeTransaction" type="s:int" />
+  <s:element minOccurs="1" maxOccurs="1" name="creationOuSuppression" type="s:int" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="RegulariserTransactionResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="1" maxOccurs="1" name="RegulariserTransactionResult" type="s:int" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlInfoTransactions">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="1" maxOccurs="1" name="TypeApplication" type="s:int" />
+  <s:element minOccurs="1" maxOccurs="1" name="CodeCentreGestion" type="s:int" />
+  <s:element minOccurs="0" maxOccurs="1" name="IdUsager" type="s:string" />
+  <s:element minOccurs="1" maxOccurs="1" name="DateDebut" type="s:dateTime" />
+  <s:element minOccurs="1" maxOccurs="1" name="DateFin" type="s:dateTime" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlInfoTransactionsResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="XmlInfoTransactionsResult" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlInfoTransactionsParPrestation">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="ReferencePrestation" type="s:string" />
+  <s:element minOccurs="0" maxOccurs="1" name="IdUsager" type="s:string" />
+  <s:element minOccurs="1" maxOccurs="1" name="DateDebut" type="s:dateTime" />
+  <s:element minOccurs="1" maxOccurs="1" name="DateFin" type="s:dateTime" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlInfoTransactionsParPrestationResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="XmlInfoTransactionsParPrestationResult" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlInfoTransactionsParTerminal">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="1" maxOccurs="1" name="CodeTerminal" type="s:int" />
+  <s:element minOccurs="0" maxOccurs="1" name="ReferencePrestation" type="s:string" />
+  <s:element minOccurs="0" maxOccurs="1" name="IdUsager" type="s:string" />
+  <s:element minOccurs="1" maxOccurs="1" name="DateDebut" type="s:dateTime" />
+  <s:element minOccurs="1" maxOccurs="1" name="DateFin" type="s:dateTime" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlInfoTransactionsParTerminalResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="XmlInfoTransactionsParTerminalResult" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlInfoTransactionsATraiter">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="pReferencePrestation" type="s:string" />
+  <s:element minOccurs="0" maxOccurs="1" name="pIdUsager" type="s:string" />
+  <s:element minOccurs="1" maxOccurs="1" name="pDateDebut" type="s:dateTime" />
+  <s:element minOccurs="1" maxOccurs="1" name="pDateFin" type="s:dateTime" />
+  <s:element minOccurs="0" maxOccurs="1" name="pTypeTraitement" type="s:string" />
+  <s:element minOccurs="1" maxOccurs="1" name="pStatut" type="s:int" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlInfoTransactionsATraiterResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="XmlInfoTransactionsATraiterResult" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlInfoTransactionsATraiterParTerminal">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="1" maxOccurs="1" name="CodeTerminal" type="s:int" />
+  <s:element minOccurs="0" maxOccurs="1" name="ReferencePrestation" type="s:string" />
+  <s:element minOccurs="0" maxOccurs="1" name="IdUsager" type="s:string" />
+  <s:element minOccurs="1" maxOccurs="1" name="DateDebut" type="s:dateTime" />
+  <s:element minOccurs="1" maxOccurs="1" name="DateFin" type="s:dateTime" />
+  <s:element minOccurs="0" maxOccurs="1" name="pTypeTraitement" type="s:string" />
+  <s:element minOccurs="1" maxOccurs="1" name="pStatut" type="s:int" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="XmlInfoTransactionsATraiterParTerminalResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="XmlInfoTransactionsATraiterParTerminalResult" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="DsInfoTransactions">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="1" maxOccurs="1" name="TypeApplication" type="s:int" />
+  <s:element minOccurs="1" maxOccurs="1" name="CodeCentreGestion" type="s:int" />
+  <s:element minOccurs="0" maxOccurs="1" name="IdUsager" type="s:string" />
+  <s:element minOccurs="1" maxOccurs="1" name="DateDebut" type="s:dateTime" />
+  <s:element minOccurs="1" maxOccurs="1" name="DateFin" type="s:dateTime" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="DsInfoTransactionsResponse">
+ <s:complexType>
+ <s:sequence>
+ <s:element minOccurs="0" maxOccurs="1" name="DsInfoTransactionsResult">
+ <s:complexType>
+ <s:sequence>
+  <s:element ref="s:schema" />
+  <s:any />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="DsInfoTransactionsParPrestation">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="ReferencePrestation" type="s:string" />
+  <s:element minOccurs="0" maxOccurs="1" name="IdUsager" type="s:string" />
+  <s:element minOccurs="1" maxOccurs="1" name="DateDebut" type="s:dateTime" />
+  <s:element minOccurs="1" maxOccurs="1" name="DateFin" type="s:dateTime" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="DsInfoTransactionsParPrestationResponse">
+ <s:complexType>
+ <s:sequence>
+ <s:element minOccurs="0" maxOccurs="1" name="DsInfoTransactionsParPrestationResult">
+ <s:complexType>
+ <s:sequence>
+  <s:element ref="s:schema" />
+  <s:any />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="DsInfoTransactionsParTerminal">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="1" maxOccurs="1" name="CodeTerminal" type="s:int" />
+  <s:element minOccurs="0" maxOccurs="1" name="ReferencePrestation" type="s:string" />
+  <s:element minOccurs="0" maxOccurs="1" name="IdUsager" type="s:string" />
+  <s:element minOccurs="1" maxOccurs="1" name="DateDebut" type="s:dateTime" />
+  <s:element minOccurs="1" maxOccurs="1" name="DateFin" type="s:dateTime" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="DsInfoTransactionsParTerminalResponse">
+ <s:complexType>
+ <s:sequence>
+ <s:element minOccurs="0" maxOccurs="1" name="DsInfoTransactionsParTerminalResult">
+ <s:complexType>
+ <s:sequence>
+  <s:element ref="s:schema" />
+  <s:any />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="RequeteExportTransactions">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="1" maxOccurs="1" name="TypeApplication" type="s:int" />
+  <s:element minOccurs="1" maxOccurs="1" name="CodeCentreGestion" type="s:int" />
+  <s:element minOccurs="0" maxOccurs="1" name="IdUsager" type="s:string" />
+  <s:element minOccurs="1" maxOccurs="1" name="DateDebut" type="s:dateTime" />
+  <s:element minOccurs="1" maxOccurs="1" name="DateFin" type="s:dateTime" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="RequeteExportTransactionsResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="RequeteExportTransactionsResult" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="RequeteExportTransactionsParPrestation">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="ReferencePrestation" type="s:string" />
+  <s:element minOccurs="0" maxOccurs="1" name="IdUsager" type="s:string" />
+  <s:element minOccurs="1" maxOccurs="1" name="DateDebut" type="s:dateTime" />
+  <s:element minOccurs="1" maxOccurs="1" name="DateFin" type="s:dateTime" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="RequeteExportTransactionsParPrestationResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="RequeteExportTransactionsParPrestationResult" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="DsObtenirDetailParGuidContrat">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="GuidContrat" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="DsObtenirDetailParGuidContratResponse">
+ <s:complexType>
+ <s:sequence>
+ <s:element minOccurs="0" maxOccurs="1" name="DsObtenirDetailParGuidContratResult">
+ <s:complexType>
+ <s:sequence>
+  <s:element ref="s:schema" />
+  <s:any />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+ <s:element name="VersionServiceWeb">
+  <s:complexType />
+  </s:element>
+ <s:element name="VersionServiceWebResponse">
+ <s:complexType>
+ <s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="VersionServiceWebResult" type="s:string" />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+  <s:element name="string" nillable="true" type="s:string" />
+ <s:element name="DataSet" nillable="true">
+ <s:complexType>
+ <s:sequence>
+  <s:element ref="s:schema" />
+  <s:any />
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+  <s:element name="int" type="s:int" />
+  </s:schema>
+  </wsdl:types>
+ <wsdl:message name="AffecterUneClasseSoapIn">
+  <wsdl:part name="parameters" element="tns:AffecterUneClasse" />
+  </wsdl:message>
+ <wsdl:message name="AffecterUneClasseSoapOut">
+  <wsdl:part name="parameters" element="tns:AffecterUneClasseResponse" />
+  </wsdl:message>
+ <wsdl:message name="AffecterRemplacerSupportSoapIn">
+  <wsdl:part name="parameters" element="tns:AffecterRemplacerSupport" />
+  </wsdl:message>
+ <wsdl:message name="AffecterRemplacerSupportSoapOut">
+  <wsdl:part name="parameters" element="tns:AffecterRemplacerSupportResponse" />
+  </wsdl:message>
+ <wsdl:message name="AjouterUneClasseSoapIn">
+  <wsdl:part name="parameters" element="tns:AjouterUneClasse" />
+  </wsdl:message>
+ <wsdl:message name="AjouterUneClasseSoapOut">
+  <wsdl:part name="parameters" element="tns:AjouterUneClasseResponse" />
+  </wsdl:message>
+ <wsdl:message name="AjouterUnEtablissementScolaireSoapIn">
+  <wsdl:part name="parameters" element="tns:AjouterUnEtablissementScolaire" />
+  </wsdl:message>
+ <wsdl:message name="AjouterUnEtablissementScolaireSoapOut">
+  <wsdl:part name="parameters" element="tns:AjouterUnEtablissementScolaireResponse" />
+  </wsdl:message>
+ <wsdl:message name="XmlAjouterComptesSoapIn">
+  <wsdl:part name="parameters" element="tns:XmlAjouterComptes" />
+  </wsdl:message>
+ <wsdl:message name="XmlAjouterComptesSoapOut">
+  <wsdl:part name="parameters" element="tns:XmlAjouterComptesResponse" />
+  </wsdl:message>
+ <wsdl:message name="XmlAjouterContratsSoapIn">
+  <wsdl:part name="parameters" element="tns:XmlAjouterContrats" />
+  </wsdl:message>
+ <wsdl:message name="XmlAjouterContratsSoapOut">
+  <wsdl:part name="parameters" element="tns:XmlAjouterContratsResponse" />
+  </wsdl:message>
+ <wsdl:message name="XmlAjouterContratsV2SoapIn">
+  <wsdl:part name="parameters" element="tns:XmlAjouterContratsV2" />
+  </wsdl:message>
+ <wsdl:message name="XmlAjouterContratsV2SoapOut">
+  <wsdl:part name="parameters" element="tns:XmlAjouterContratsV2Response" />
+  </wsdl:message>
+ <wsdl:message name="XmlAjouterCreditsCompteSoapIn">
+  <wsdl:part name="parameters" element="tns:XmlAjouterCreditsCompte" />
+  </wsdl:message>
+ <wsdl:message name="XmlAjouterCreditsCompteSoapOut">
+  <wsdl:part name="parameters" element="tns:XmlAjouterCreditsCompteResponse" />
+  </wsdl:message>
+ <wsdl:message name="XmlAjouterDebitsCompteSoapIn">
+  <wsdl:part name="parameters" element="tns:XmlAjouterDebitsCompte" />
+  </wsdl:message>
+ <wsdl:message name="XmlAjouterDebitsCompteSoapOut">
+  <wsdl:part name="parameters" element="tns:XmlAjouterDebitsCompteResponse" />
+  </wsdl:message>
+ <wsdl:message name="XmlAjouterLiensContratsTerminauxSoapIn">
+  <wsdl:part name="parameters" element="tns:XmlAjouterLiensContratsTerminaux" />
+  </wsdl:message>
+ <wsdl:message name="XmlAjouterLiensContratsTerminauxSoapOut">
+  <wsdl:part name="parameters" element="tns:XmlAjouterLiensContratsTerminauxResponse" />
+  </wsdl:message>
+ <wsdl:message name="AjouterLienUsagerTitulaireSoapIn">
+  <wsdl:part name="parameters" element="tns:AjouterLienUsagerTitulaire" />
+  </wsdl:message>
+ <wsdl:message name="AjouterLienUsagerTitulaireSoapOut">
+  <wsdl:part name="parameters" element="tns:AjouterLienUsagerTitulaireResponse" />
+  </wsdl:message>
+ <wsdl:message name="XmlAjouterInscriptionsSoapIn">
+  <wsdl:part name="parameters" element="tns:XmlAjouterInscriptions" />
+  </wsdl:message>
+ <wsdl:message name="XmlAjouterInscriptionsSoapOut">
+  <wsdl:part name="parameters" element="tns:XmlAjouterInscriptionsResponse" />
+  </wsdl:message>
+ <wsdl:message name="XmlAjouterResponsablesSoapIn">
+  <wsdl:part name="parameters" element="tns:XmlAjouterResponsables" />
+  </wsdl:message>
+ <wsdl:message name="XmlAjouterResponsablesSoapOut">
+  <wsdl:part name="parameters" element="tns:XmlAjouterResponsablesResponse" />
+  </wsdl:message>
+ <wsdl:message name="XmlAjouterTitulaireSoapIn">
+  <wsdl:part name="parameters" element="tns:XmlAjouterTitulaire" />
+  </wsdl:message>
+ <wsdl:message name="XmlAjouterTitulaireSoapOut">
+  <wsdl:part name="parameters" element="tns:XmlAjouterTitulaireResponse" />
+  </wsdl:message>
+ <wsdl:message name="XmlAjouterUsagerSoapIn">
+  <wsdl:part name="parameters" element="tns:XmlAjouterUsager" />
+  </wsdl:message>
+ <wsdl:message name="XmlAjouterUsagerSoapOut">
+  <wsdl:part name="parameters" element="tns:XmlAjouterUsagerResponse" />
+  </wsdl:message>
+ <wsdl:message name="XmlCommanderLotSupportsSoapIn">
+  <wsdl:part name="parameters" element="tns:XmlCommanderLotSupports" />
+  </wsdl:message>
+ <wsdl:message name="XmlCommanderLotSupportsSoapOut">
+  <wsdl:part name="parameters" element="tns:XmlCommanderLotSupportsResponse" />
+  </wsdl:message>
+ <wsdl:message name="XmlComptesTitulaireSoapIn">
+  <wsdl:part name="parameters" element="tns:XmlComptesTitulaire" />
+  </wsdl:message>
+ <wsdl:message name="XmlComptesTitulaireSoapOut">
+  <wsdl:part name="parameters" element="tns:XmlComptesTitulaireResponse" />
+  </wsdl:message>
+ <wsdl:message name="DsComptesTitulaireSoapIn">
+  <wsdl:part name="parameters" element="tns:DsComptesTitulaire" />
+  </wsdl:message>
+ <wsdl:message name="DsComptesTitulaireSoapOut">
+  <wsdl:part name="parameters" element="tns:DsComptesTitulaireResponse" />
+  </wsdl:message>
+ <wsdl:message name="XmlConsommationsComptesTitulaireSoapIn">
+  <wsdl:part name="parameters" element="tns:XmlConsommationsComptesTitulaire" />
+  </wsdl:message>
+ <wsdl:message name="XmlConsommationsComptesTitulaireSoapOut">
+  <wsdl:part name="parameters" element="tns:XmlConsommationsComptesTitulaireResponse" />
+  </wsdl:message>
+ <wsdl:message name="testAppelSoapIn">
+  <wsdl:part name="parameters" element="tns:testAppel" />
+  </wsdl:message>
+ <wsdl:message name="testAppelSoapOut">
+  <wsdl:part name="parameters" element="tns:testAppelResponse" />
+  </wsdl:message>
+ <wsdl:message name="DsConsommationsComptesTitulaireSoapIn">
+  <wsdl:part name="parameters" element="tns:DsConsommationsComptesTitulaire" />
+  </wsdl:message>
+ <wsdl:message name="DsConsommationsComptesTitulaireSoapOut">
+  <wsdl:part name="parameters" element="tns:DsConsommationsComptesTitulaireResponse" />
+  </wsdl:message>
+ <wsdl:message name="XmlConsommationsComptesTitulaireParCentreGestionSoapIn">
+  <wsdl:part name="parameters" element="tns:XmlConsommationsComptesTitulaireParCentreGestion" />
+  </wsdl:message>
+ <wsdl:message name="XmlConsommationsComptesTitulaireParCentreGestionSoapOut">
+  <wsdl:part name="parameters" element="tns:XmlConsommationsComptesTitulaireParCentreGestionResponse" />
+  </wsdl:message>
+ <wsdl:message name="DsConsommationsComptesTitulaireParCentreGestionSoapIn">
+  <wsdl:part name="parameters" element="tns:DsConsommationsComptesTitulaireParCentreGestion" />
+  </wsdl:message>
+ <wsdl:message name="DsConsommationsComptesTitulaireParCentreGestionSoapOut">
+  <wsdl:part name="parameters" element="tns:DsConsommationsComptesTitulaireParCentreGestionResponse" />
+  </wsdl:message>
+ <wsdl:message name="XmlDonnerGUIDSoapIn">
+  <wsdl:part name="parameters" element="tns:XmlDonnerGUID" />
+  </wsdl:message>
+ <wsdl:message name="XmlDonnerGUIDSoapOut">
+  <wsdl:part name="parameters" element="tns:XmlDonnerGUIDResponse" />
+  </wsdl:message>
+ <wsdl:message name="DsDonnerGUIDSoapIn">
+  <wsdl:part name="parameters" element="tns:DsDonnerGUID" />
+  </wsdl:message>
+ <wsdl:message name="DsDonnerGUIDSoapOut">
+  <wsdl:part name="parameters" element="tns:DsDonnerGUIDResponse" />
+  </wsdl:message>
+ <wsdl:message name="DonnerIdCVQSoapIn">
+  <wsdl:part name="parameters" element="tns:DonnerIdCVQ" />
+  </wsdl:message>
+ <wsdl:message name="DonnerIdCVQSoapOut">
+  <wsdl:part name="parameters" element="tns:DonnerIdCVQResponse" />
+  </wsdl:message>
+ <wsdl:message name="XmlAjouterUnEvenementSoapIn">
+  <wsdl:part name="parameters" element="tns:XmlAjouterUnEvenement" />
+  </wsdl:message>
+ <wsdl:message name="XmlAjouterUnEvenementSoapOut">
+  <wsdl:part name="parameters" element="tns:XmlAjouterUnEvenementResponse" />
+  </wsdl:message>
+ <wsdl:message name="XMLInfoEvtAsyncSoapIn">
+  <wsdl:part name="parameters" element="tns:XMLInfoEvtAsync" />
+  </wsdl:message>
+ <wsdl:message name="XMLInfoEvtAsyncSoapOut">
+  <wsdl:part name="parameters" element="tns:XMLInfoEvtAsyncResponse" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoActeurSoapIn">
+  <wsdl:part name="parameters" element="tns:XmlInfoActeur" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoActeurSoapOut">
+  <wsdl:part name="parameters" element="tns:XmlInfoActeurResponse" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoActeurV2SoapIn">
+  <wsdl:part name="parameters" element="tns:XmlInfoActeurV2" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoActeurV2SoapOut">
+  <wsdl:part name="parameters" element="tns:XmlInfoActeurV2Response" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoActeurNumSerieSoapIn">
+  <wsdl:part name="parameters" element="tns:XmlInfoActeurNumSerie" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoActeurNumSerieSoapOut">
+  <wsdl:part name="parameters" element="tns:XmlInfoActeurNumSerieResponse" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoActeurNumSerieV2SoapIn">
+  <wsdl:part name="parameters" element="tns:XmlInfoActeurNumSerieV2" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoActeurNumSerieV2SoapOut">
+  <wsdl:part name="parameters" element="tns:XmlInfoActeurNumSerieV2Response" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoActeurIdSoapIn">
+  <wsdl:part name="parameters" element="tns:XmlInfoActeurId" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoActeurIdSoapOut">
+  <wsdl:part name="parameters" element="tns:XmlInfoActeurIdResponse" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoContratsSoapIn">
+  <wsdl:part name="parameters" element="tns:XmlInfoContrats" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoContratsSoapOut">
+  <wsdl:part name="parameters" element="tns:XmlInfoContratsResponse" />
+  </wsdl:message>
+ <wsdl:message name="DsInfoContratsSoapIn">
+  <wsdl:part name="parameters" element="tns:DsInfoContrats" />
+  </wsdl:message>
+ <wsdl:message name="DsInfoContratsSoapOut">
+  <wsdl:part name="parameters" element="tns:DsInfoContratsResponse" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoInscriptionsContratsSoapIn">
+  <wsdl:part name="parameters" element="tns:XmlInfoInscriptionsContrats" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoInscriptionsContratsSoapOut">
+  <wsdl:part name="parameters" element="tns:XmlInfoInscriptionsContratsResponse" />
+  </wsdl:message>
+ <wsdl:message name="DsInfoInscriptionsContratsSoapIn">
+  <wsdl:part name="parameters" element="tns:DsInfoInscriptionsContrats" />
+  </wsdl:message>
+ <wsdl:message name="DsInfoInscriptionsContratsSoapOut">
+  <wsdl:part name="parameters" element="tns:DsInfoInscriptionsContratsResponse" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoPrestationsSoapIn">
+  <wsdl:part name="parameters" element="tns:XmlInfoPrestations" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoPrestationsSoapOut">
+  <wsdl:part name="parameters" element="tns:XmlInfoPrestationsResponse" />
+  </wsdl:message>
+ <wsdl:message name="DsInfoPrestationsSoapIn">
+  <wsdl:part name="parameters" element="tns:DsInfoPrestations" />
+  </wsdl:message>
+ <wsdl:message name="DsInfoPrestationsSoapOut">
+  <wsdl:part name="parameters" element="tns:DsInfoPrestationsResponse" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfosQuotientsSoapIn">
+  <wsdl:part name="parameters" element="tns:XmlInfosQuotients" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfosQuotientsSoapOut">
+  <wsdl:part name="parameters" element="tns:XmlInfosQuotientsResponse" />
+  </wsdl:message>
+ <wsdl:message name="DsInfosQuotientsSoapIn">
+  <wsdl:part name="parameters" element="tns:DsInfosQuotients" />
+  </wsdl:message>
+ <wsdl:message name="DsInfosQuotientsSoapOut">
+  <wsdl:part name="parameters" element="tns:DsInfosQuotientsResponse" />
+  </wsdl:message>
+ <wsdl:message name="DsInfosReglementsSoapIn">
+  <wsdl:part name="parameters" element="tns:DsInfosReglements" />
+  </wsdl:message>
+ <wsdl:message name="DsInfosReglementsSoapOut">
+  <wsdl:part name="parameters" element="tns:DsInfosReglementsResponse" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfosReglementsSoapIn">
+  <wsdl:part name="parameters" element="tns:XmlInfosReglements" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfosReglementsSoapOut">
+  <wsdl:part name="parameters" element="tns:XmlInfosReglementsResponse" />
+  </wsdl:message>
+ <wsdl:message name="DsInfoServicesSoapIn">
+  <wsdl:part name="parameters" element="tns:DsInfoServices" />
+  </wsdl:message>
+ <wsdl:message name="DsInfoServicesSoapOut">
+  <wsdl:part name="parameters" element="tns:DsInfoServicesResponse" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoSupportsActeurSoapIn">
+  <wsdl:part name="parameters" element="tns:XmlInfoSupportsActeur" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoSupportsActeurSoapOut">
+  <wsdl:part name="parameters" element="tns:XmlInfoSupportsActeurResponse" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoTitulaireSoapIn">
+  <wsdl:part name="parameters" element="tns:XmlInfoTitulaire" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoTitulaireSoapOut">
+  <wsdl:part name="parameters" element="tns:XmlInfoTitulaireResponse" />
+  </wsdl:message>
+ <wsdl:message name="DsInfoTitulaireSoapIn">
+  <wsdl:part name="parameters" element="tns:DsInfoTitulaire" />
+  </wsdl:message>
+ <wsdl:message name="DsInfoTitulaireSoapOut">
+  <wsdl:part name="parameters" element="tns:DsInfoTitulaireResponse" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoVersionBaseDonneesSoapIn">
+  <wsdl:part name="parameters" element="tns:XmlInfoVersionBaseDonnees" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoVersionBaseDonneesSoapOut">
+  <wsdl:part name="parameters" element="tns:XmlInfoVersionBaseDonneesResponse" />
+  </wsdl:message>
+ <wsdl:message name="DsInfoVersionBaseDonneesSoapIn">
+  <wsdl:part name="parameters" element="tns:DsInfoVersionBaseDonnees" />
+  </wsdl:message>
+ <wsdl:message name="DsInfoVersionBaseDonneesSoapOut">
+  <wsdl:part name="parameters" element="tns:DsInfoVersionBaseDonneesResponse" />
+  </wsdl:message>
+ <wsdl:message name="XMLInfoServeurPresentSoapIn">
+  <wsdl:part name="parameters" element="tns:XMLInfoServeurPresent" />
+  </wsdl:message>
+ <wsdl:message name="XMLInfoServeurPresentSoapOut">
+  <wsdl:part name="parameters" element="tns:XMLInfoServeurPresentResponse" />
+  </wsdl:message>
+ <wsdl:message name="DsInfoServeurPresentSoapIn">
+  <wsdl:part name="parameters" element="tns:DsInfoServeurPresent" />
+  </wsdl:message>
+ <wsdl:message name="DsInfoServeurPresentSoapOut">
+  <wsdl:part name="parameters" element="tns:DsInfoServeurPresentResponse" />
+  </wsdl:message>
+ <wsdl:message name="IDescenteBambiTermSoapIn">
+  <wsdl:part name="parameters" element="tns:IDescenteBambiTerm" />
+  </wsdl:message>
+ <wsdl:message name="IDescenteBambiTermSoapOut">
+  <wsdl:part name="parameters" element="tns:IDescenteBambiTermResponse" />
+  </wsdl:message>
+ <wsdl:message name="InfosParamsServicesSoapIn">
+  <wsdl:part name="parameters" element="tns:InfosParamsServices" />
+  </wsdl:message>
+ <wsdl:message name="InfosParamsServicesSoapOut">
+  <wsdl:part name="parameters" element="tns:InfosParamsServicesResponse" />
+  </wsdl:message>
+ <wsdl:message name="ImporterLignesFacturationSoapIn">
+  <wsdl:part name="parameters" element="tns:ImporterLignesFacturation" />
+  </wsdl:message>
+ <wsdl:message name="ImporterLignesFacturationSoapOut">
+  <wsdl:part name="parameters" element="tns:ImporterLignesFacturationResponse" />
+  </wsdl:message>
+ <wsdl:message name="lignesFacturationsSoapIn">
+  <wsdl:part name="parameters" element="tns:lignesFacturations" />
+  </wsdl:message>
+ <wsdl:message name="lignesFacturationsSoapOut">
+  <wsdl:part name="parameters" element="tns:lignesFacturationsResponse" />
+  </wsdl:message>
+ <wsdl:message name="DsListeUsagersSoapIn">
+  <wsdl:part name="parameters" element="tns:DsListeUsagers" />
+  </wsdl:message>
+ <wsdl:message name="DsListeUsagersSoapOut">
+  <wsdl:part name="parameters" element="tns:DsListeUsagersResponse" />
+  </wsdl:message>
+ <wsdl:message name="XmlListeUsagersSoapIn">
+  <wsdl:part name="parameters" element="tns:XmlListeUsagers" />
+  </wsdl:message>
+ <wsdl:message name="XmlListeUsagersSoapOut">
+  <wsdl:part name="parameters" element="tns:XmlListeUsagersResponse" />
+  </wsdl:message>
+ <wsdl:message name="MAJStatutTraitementPartenaireSoapIn">
+  <wsdl:part name="parameters" element="tns:MAJStatutTraitementPartenaire" />
+  </wsdl:message>
+ <wsdl:message name="MAJStatutTraitementPartenaireSoapOut">
+  <wsdl:part name="parameters" element="tns:MAJStatutTraitementPartenaireResponse" />
+  </wsdl:message>
+ <wsdl:message name="XmlRechercherActeursSoapIn">
+  <wsdl:part name="parameters" element="tns:XmlRechercherActeurs" />
+  </wsdl:message>
+ <wsdl:message name="XmlRechercherActeursSoapOut">
+  <wsdl:part name="parameters" element="tns:XmlRechercherActeursResponse" />
+  </wsdl:message>
+ <wsdl:message name="XmlRechercherActeursNivSoapIn">
+  <wsdl:part name="parameters" element="tns:XmlRechercherActeursNiv" />
+  </wsdl:message>
+ <wsdl:message name="XmlRechercherActeursNivSoapOut">
+  <wsdl:part name="parameters" element="tns:XmlRechercherActeursNivResponse" />
+  </wsdl:message>
+ <wsdl:message name="AjouterUneTransactionTerminalSoapIn">
+  <wsdl:part name="parameters" element="tns:AjouterUneTransactionTerminal" />
+  </wsdl:message>
+ <wsdl:message name="AjouterUneTransactionTerminalSoapOut">
+  <wsdl:part name="parameters" element="tns:AjouterUneTransactionTerminalResponse" />
+  </wsdl:message>
+ <wsdl:message name="XmlRegulariserTransactionSoapIn">
+  <wsdl:part name="parameters" element="tns:XmlRegulariserTransaction" />
+  </wsdl:message>
+ <wsdl:message name="XmlRegulariserTransactionSoapOut">
+  <wsdl:part name="parameters" element="tns:XmlRegulariserTransactionResponse" />
+  </wsdl:message>
+ <wsdl:message name="RegulariserTransactionSoapIn">
+  <wsdl:part name="parameters" element="tns:RegulariserTransaction" />
+  </wsdl:message>
+ <wsdl:message name="RegulariserTransactionSoapOut">
+  <wsdl:part name="parameters" element="tns:RegulariserTransactionResponse" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoTransactionsSoapIn">
+  <wsdl:part name="parameters" element="tns:XmlInfoTransactions" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoTransactionsSoapOut">
+  <wsdl:part name="parameters" element="tns:XmlInfoTransactionsResponse" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoTransactionsParPrestationSoapIn">
+  <wsdl:part name="parameters" element="tns:XmlInfoTransactionsParPrestation" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoTransactionsParPrestationSoapOut">
+  <wsdl:part name="parameters" element="tns:XmlInfoTransactionsParPrestationResponse" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoTransactionsParTerminalSoapIn">
+  <wsdl:part name="parameters" element="tns:XmlInfoTransactionsParTerminal" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoTransactionsParTerminalSoapOut">
+  <wsdl:part name="parameters" element="tns:XmlInfoTransactionsParTerminalResponse" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoTransactionsATraiterSoapIn">
+  <wsdl:part name="parameters" element="tns:XmlInfoTransactionsATraiter" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoTransactionsATraiterSoapOut">
+  <wsdl:part name="parameters" element="tns:XmlInfoTransactionsATraiterResponse" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoTransactionsATraiterParTerminalSoapIn">
+  <wsdl:part name="parameters" element="tns:XmlInfoTransactionsATraiterParTerminal" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoTransactionsATraiterParTerminalSoapOut">
+  <wsdl:part name="parameters" element="tns:XmlInfoTransactionsATraiterParTerminalResponse" />
+  </wsdl:message>
+ <wsdl:message name="DsInfoTransactionsSoapIn">
+  <wsdl:part name="parameters" element="tns:DsInfoTransactions" />
+  </wsdl:message>
+ <wsdl:message name="DsInfoTransactionsSoapOut">
+  <wsdl:part name="parameters" element="tns:DsInfoTransactionsResponse" />
+  </wsdl:message>
+ <wsdl:message name="DsInfoTransactionsParPrestationSoapIn">
+  <wsdl:part name="parameters" element="tns:DsInfoTransactionsParPrestation" />
+  </wsdl:message>
+ <wsdl:message name="DsInfoTransactionsParPrestationSoapOut">
+  <wsdl:part name="parameters" element="tns:DsInfoTransactionsParPrestationResponse" />
+  </wsdl:message>
+ <wsdl:message name="DsInfoTransactionsParTerminalSoapIn">
+  <wsdl:part name="parameters" element="tns:DsInfoTransactionsParTerminal" />
+  </wsdl:message>
+ <wsdl:message name="DsInfoTransactionsParTerminalSoapOut">
+  <wsdl:part name="parameters" element="tns:DsInfoTransactionsParTerminalResponse" />
+  </wsdl:message>
+ <wsdl:message name="RequeteExportTransactionsSoapIn">
+  <wsdl:part name="parameters" element="tns:RequeteExportTransactions" />
+  </wsdl:message>
+ <wsdl:message name="RequeteExportTransactionsSoapOut">
+  <wsdl:part name="parameters" element="tns:RequeteExportTransactionsResponse" />
+  </wsdl:message>
+ <wsdl:message name="RequeteExportTransactionsParPrestationSoapIn">
+  <wsdl:part name="parameters" element="tns:RequeteExportTransactionsParPrestation" />
+  </wsdl:message>
+ <wsdl:message name="RequeteExportTransactionsParPrestationSoapOut">
+  <wsdl:part name="parameters" element="tns:RequeteExportTransactionsParPrestationResponse" />
+  </wsdl:message>
+ <wsdl:message name="DsObtenirDetailParGuidContratSoapIn">
+  <wsdl:part name="parameters" element="tns:DsObtenirDetailParGuidContrat" />
+  </wsdl:message>
+ <wsdl:message name="DsObtenirDetailParGuidContratSoapOut">
+  <wsdl:part name="parameters" element="tns:DsObtenirDetailParGuidContratResponse" />
+  </wsdl:message>
+ <wsdl:message name="VersionServiceWebSoapIn">
+  <wsdl:part name="parameters" element="tns:VersionServiceWeb" />
+  </wsdl:message>
+ <wsdl:message name="VersionServiceWebSoapOut">
+  <wsdl:part name="parameters" element="tns:VersionServiceWebResponse" />
+  </wsdl:message>
+ <wsdl:message name="AffecterUneClasseHttpGetIn">
+  <wsdl:part name="IdUsager" type="s:string" />
+  <wsdl:part name="IdClasse" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="AffecterUneClasseHttpGetOut">
+  <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+ <wsdl:message name="AffecterRemplacerSupportHttpGetIn">
+  <wsdl:part name="IdPorteur" type="s:string" />
+  <wsdl:part name="NumeroAncienSupport" type="s:string" />
+  <wsdl:part name="NumeroNouveauSupport" type="s:string" />
+  <wsdl:part name="technologie" type="s:string" />
+  <wsdl:part name="categorie" type="s:string" />
+  <wsdl:part name="ListeNoire" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="AffecterRemplacerSupportHttpGetOut">
+  <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+ <wsdl:message name="AjouterUneClasseHttpGetIn">
+  <wsdl:part name="IdClasse" type="s:string" />
+  <wsdl:part name="IdEtablissement" type="s:string" />
+  <wsdl:part name="Nom" type="s:string" />
+  <wsdl:part name="Informations" type="s:string" />
+  <wsdl:part name="IdExterneClasse" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="AjouterUneClasseHttpGetOut">
+  <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+ <wsdl:message name="AjouterUnEtablissementScolaireHttpGetIn">
+  <wsdl:part name="IdEtablissement" type="s:string" />
+  <wsdl:part name="Nom" type="s:string" />
+  <wsdl:part name="Adresse1" type="s:string" />
+  <wsdl:part name="Adresse2" type="s:string" />
+  <wsdl:part name="Adresse3" type="s:string" />
+  <wsdl:part name="Telephone1" type="s:string" />
+  <wsdl:part name="Telephone2" type="s:string" />
+  <wsdl:part name="Fax" type="s:string" />
+  <wsdl:part name="Courriel" type="s:string" />
+  <wsdl:part name="Informations" type="s:string" />
+  <wsdl:part name="CodePostal" type="s:string" />
+  <wsdl:part name="Ville" type="s:string" />
+  <wsdl:part name="CodePays" type="s:string" />
+  <wsdl:part name="NumeroEtablissement" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="AjouterUnEtablissementScolaireHttpGetOut">
+  <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlAjouterComptesHttpGetIn">
+  <wsdl:part name="donneesXml" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlAjouterComptesHttpGetOut">
+  <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlAjouterContratsHttpGetIn">
+  <wsdl:part name="donneesXml" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlAjouterContratsHttpGetOut">
+  <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlAjouterContratsV2HttpGetIn">
+  <wsdl:part name="donneesXml" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlAjouterContratsV2HttpGetOut">
+  <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlAjouterCreditsCompteHttpGetIn">
+  <wsdl:part name="donneesXml" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlAjouterCreditsCompteHttpGetOut">
+  <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlAjouterDebitsCompteHttpGetIn">
+  <wsdl:part name="donneesXml" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlAjouterDebitsCompteHttpGetOut">
+  <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlAjouterLiensContratsTerminauxHttpGetIn">
+  <wsdl:part name="donneesXml" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlAjouterLiensContratsTerminauxHttpGetOut">
+  <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+ <wsdl:message name="AjouterLienUsagerTitulaireHttpGetIn">
+  <wsdl:part name="IdUsager" type="s:string" />
+  <wsdl:part name="IdTitulaire" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="AjouterLienUsagerTitulaireHttpGetOut">
+  <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlAjouterInscriptionsHttpGetIn">
+  <wsdl:part name="donneesXml" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlAjouterInscriptionsHttpGetOut">
+  <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlAjouterResponsablesHttpGetIn">
+  <wsdl:part name="donneesXml" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlAjouterResponsablesHttpGetOut">
+  <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlAjouterTitulaireHttpGetIn">
+  <wsdl:part name="donneesXml" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlAjouterTitulaireHttpGetOut">
+  <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlAjouterUsagerHttpGetIn">
+  <wsdl:part name="donneesXml" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlAjouterUsagerHttpGetOut">
+  <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlCommanderLotSupportsHttpGetIn">
+  <wsdl:part name="donneesXml" type="s:string" />
+  <wsdl:part name="typeTraitement" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlCommanderLotSupportsHttpGetOut">
+  <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlComptesTitulaireHttpGetIn">
+  <wsdl:part name="titulaireId" type="s:string" />
+  <wsdl:part name="codeCentreGestion" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlComptesTitulaireHttpGetOut">
+  <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+ <wsdl:message name="DsComptesTitulaireHttpGetIn">
+  <wsdl:part name="titulaireId" type="s:string" />
+  <wsdl:part name="codeCentreGestion" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="DsComptesTitulaireHttpGetOut">
+  <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+ <wsdl:message name="XmlConsommationsComptesTitulaireHttpGetIn">
+  <wsdl:part name="titulaireId" type="s:string" />
+  <wsdl:part name="UsagerId" type="s:string" />
+  <wsdl:part name="DateDebutPeriode" type="s:string" />
+  <wsdl:part name="DateFinPeriode" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlConsommationsComptesTitulaireHttpGetOut">
+  <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+ <wsdl:message name="testAppelHttpGetIn">
+  <wsdl:part name="titulaireId" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="testAppelHttpGetOut">
+  <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+ <wsdl:message name="DsConsommationsComptesTitulaireHttpGetIn">
+  <wsdl:part name="titulaireId" type="s:string" />
+  <wsdl:part name="UsagerId" type="s:string" />
+  <wsdl:part name="DateDebutPeriode" type="s:string" />
+  <wsdl:part name="DateFinPeriode" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="DsConsommationsComptesTitulaireHttpGetOut">
+  <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+ <wsdl:message name="XmlConsommationsComptesTitulaireParCentreGestionHttpGetIn">
+  <wsdl:part name="titulaireId" type="s:string" />
+  <wsdl:part name="UsagerId" type="s:string" />
+  <wsdl:part name="DateDebutPeriode" type="s:string" />
+  <wsdl:part name="DateFinPeriode" type="s:string" />
+  <wsdl:part name="CodeCentreGestion" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlConsommationsComptesTitulaireParCentreGestionHttpGetOut">
+  <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+ <wsdl:message name="DsConsommationsComptesTitulaireParCentreGestionHttpGetIn">
+  <wsdl:part name="titulaireId" type="s:string" />
+  <wsdl:part name="UsagerId" type="s:string" />
+  <wsdl:part name="DateDebutPeriode" type="s:string" />
+  <wsdl:part name="DateFinPeriode" type="s:string" />
+  <wsdl:part name="CodeCentreGestion" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="DsConsommationsComptesTitulaireParCentreGestionHttpGetOut">
+  <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="XmlDonnerGUIDHttpGetIn" />
+ <wsdl:message name="XmlDonnerGUIDHttpGetOut">
+  <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DsDonnerGUIDHttpGetIn" />
+ <wsdl:message name="DsDonnerGUIDHttpGetOut">
+  <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="DonnerIdCVQHttpGetIn" />
+ <wsdl:message name="DonnerIdCVQHttpGetOut">
+  <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlAjouterUnEvenementHttpGetIn">
+  <wsdl:part name="Synchrone" type="s:string" />
+  <wsdl:part name="donneesXml" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlAjouterUnEvenementHttpGetOut">
+  <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+ <wsdl:message name="XMLInfoEvtAsyncHttpGetIn">
+  <wsdl:part name="numeroEvt" type="s:string" />
+  <wsdl:part name="codeFournisseur" type="s:string" />
+  <wsdl:part name="dateDebut" type="s:string" />
+  <wsdl:part name="dateFin" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="XMLInfoEvtAsyncHttpGetOut">
+  <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoActeurHttpGetIn">
+  <wsdl:part name="ActeurId" type="s:string" />
+  <wsdl:part name="NumSerie" type="s:string" />
+  <wsdl:part name="TechnologieSupport" type="s:string" />
+  <wsdl:part name="CodeApplication" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoActeurHttpGetOut">
+  <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoActeurV2HttpGetIn">
+  <wsdl:part name="ActeurId" type="s:string" />
+  <wsdl:part name="NumSerie" type="s:string" />
+  <wsdl:part name="TechnologieSupport" type="s:string" />
+  <wsdl:part name="CodeApplication" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoActeurV2HttpGetOut">
+  <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoActeurNumSerieHttpGetIn">
+  <wsdl:part name="NumSerie" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoActeurNumSerieHttpGetOut">
+  <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoActeurNumSerieV2HttpGetIn">
+  <wsdl:part name="NumSerie" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoActeurNumSerieV2HttpGetOut">
+  <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoActeurIdHttpGetIn">
+  <wsdl:part name="IdActeur" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoActeurIdHttpGetOut">
+  <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoContratsHttpGetIn">
+  <wsdl:part name="UsagerId" type="s:string" />
+  <wsdl:part name="DateDebutPeriode" type="s:string" />
+  <wsdl:part name="DateFinPeriode" type="s:string" />
+  <wsdl:part name="NumeroSerie" type="s:string" />
+  <wsdl:part name="Technologie" type="s:string" />
+  <wsdl:part name="NumeroContrat" type="s:string" />
+  <wsdl:part name="ContratsActifs" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoContratsHttpGetOut">
+  <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+ <wsdl:message name="DsInfoContratsHttpGetIn">
+  <wsdl:part name="UsagerId" type="s:string" />
+  <wsdl:part name="DateDebutPeriode" type="s:string" />
+  <wsdl:part name="DateFinPeriode" type="s:string" />
+  <wsdl:part name="NumeroSerie" type="s:string" />
+  <wsdl:part name="Technologie" type="s:string" />
+  <wsdl:part name="NumeroContrat" type="s:string" />
+  <wsdl:part name="ContratsActifs" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="DsInfoContratsHttpGetOut">
+  <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoInscriptionsContratsHttpGetIn">
+  <wsdl:part name="titulaireId" type="s:string" />
+  <wsdl:part name="UsagerId" type="s:string" />
+  <wsdl:part name="DateDebutPeriode" type="s:string" />
+  <wsdl:part name="DateFinPeriode" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoInscriptionsContratsHttpGetOut">
+  <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+ <wsdl:message name="DsInfoInscriptionsContratsHttpGetIn">
+  <wsdl:part name="titulaireId" type="s:string" />
+  <wsdl:part name="UsagerId" type="s:string" />
+  <wsdl:part name="DateDebutPeriode" type="s:string" />
+  <wsdl:part name="DateFinPeriode" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="DsInfoInscriptionsContratsHttpGetOut">
+  <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoPrestationsHttpGetIn">
+  <wsdl:part name="CodeService" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoPrestationsHttpGetOut">
+  <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+ <wsdl:message name="DsInfoPrestationsHttpGetIn">
+  <wsdl:part name="CodeService" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="DsInfoPrestationsHttpGetOut">
+  <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfosQuotientsHttpGetIn">
+  <wsdl:part name="IdTitulaire" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfosQuotientsHttpGetOut">
+  <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+ <wsdl:message name="DsInfosQuotientsHttpGetIn">
+  <wsdl:part name="IdTitulaire" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="DsInfosQuotientsHttpGetOut">
+  <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+ <wsdl:message name="DsInfosReglementsHttpGetIn">
+  <wsdl:part name="CodeCentreGestion" type="s:string" />
+  <wsdl:part name="IdTitulaire" type="s:string" />
+  <wsdl:part name="NumeroCompte" type="s:string" />
+  <wsdl:part name="DateDebutPeriode" type="s:string" />
+  <wsdl:part name="DateFinPeriode" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="DsInfosReglementsHttpGetOut">
+  <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfosReglementsHttpGetIn">
+  <wsdl:part name="CodeCentreGestion" type="s:string" />
+  <wsdl:part name="IdTitulaire" type="s:string" />
+  <wsdl:part name="NumeroCompte" type="s:string" />
+  <wsdl:part name="DateDebutPeriode" type="s:string" />
+  <wsdl:part name="DateFinPeriode" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfosReglementsHttpGetOut">
+  <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DsInfoServicesHttpGetIn" />
+ <wsdl:message name="DsInfoServicesHttpGetOut">
+  <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoSupportsActeurHttpGetIn">
+  <wsdl:part name="IdActeur" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoSupportsActeurHttpGetOut">
+  <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoTitulaireHttpGetIn">
+  <wsdl:part name="titulaireId" type="s:string" />
+  <wsdl:part name="usagerId" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoTitulaireHttpGetOut">
+  <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+ <wsdl:message name="DsInfoTitulaireHttpGetIn">
+  <wsdl:part name="titulaireId" type="s:string" />
+  <wsdl:part name="usagerId" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="DsInfoTitulaireHttpGetOut">
+  <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="XmlInfoVersionBaseDonneesHttpGetIn" />
+ <wsdl:message name="XmlInfoVersionBaseDonneesHttpGetOut">
+  <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DsInfoVersionBaseDonneesHttpGetIn" />
+ <wsdl:message name="DsInfoVersionBaseDonneesHttpGetOut">
+  <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="XMLInfoServeurPresentHttpGetIn" />
+ <wsdl:message name="XMLInfoServeurPresentHttpGetOut">
+  <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DsInfoServeurPresentHttpGetIn" />
+ <wsdl:message name="DsInfoServeurPresentHttpGetOut">
+  <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+ <wsdl:message name="IDescenteBambiTermHttpGetIn">
+  <wsdl:part name="Nom" type="s:string" />
+  <wsdl:part name="Prenom" type="s:string" />
+  <wsdl:part name="IdExterneUsager" type="s:string" />
+  <wsdl:part name="PresentService1" type="s:string" />
+  <wsdl:part name="PresentService2" type="s:string" />
+  <wsdl:part name="PresentService3" type="s:string" />
+  <wsdl:part name="PresentService4" type="s:string" />
+  <wsdl:part name="PresentService5" type="s:string" />
+  <wsdl:part name="PresentService6" type="s:string" />
+  <wsdl:part name="PresentService7" type="s:string" />
+  <wsdl:part name="PresentService8" type="s:string" />
+  <wsdl:part name="PresentService9" type="s:string" />
+  <wsdl:part name="libelleService1" type="s:string" />
+  <wsdl:part name="libelleService2" type="s:string" />
+  <wsdl:part name="libelleService3" type="s:string" />
+  <wsdl:part name="libelleService4" type="s:string" />
+  <wsdl:part name="libelleService5" type="s:string" />
+  <wsdl:part name="libelleService6" type="s:string" />
+  <wsdl:part name="libelleService7" type="s:string" />
+  <wsdl:part name="libelleService8" type="s:string" />
+  <wsdl:part name="libelleService9" type="s:string" />
+  <wsdl:part name="ClasseScolaire" type="s:string" />
+  <wsdl:part name="DateDemande" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="IDescenteBambiTermHttpGetOut" />
+  <wsdl:message name="InfosParamsServicesHttpGetIn" />
+ <wsdl:message name="InfosParamsServicesHttpGetOut">
+  <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+ <wsdl:message name="ImporterLignesFacturationHttpGetIn">
+  <wsdl:part name="idApplication" type="s:string" />
+  <wsdl:part name="produitsAImporter" type="s:string" />
+  <wsdl:part name="DateDebut" type="s:string" />
+  <wsdl:part name="DateFin" type="s:string" />
+  <wsdl:part name="CodeCarteUsager" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ImporterLignesFacturationHttpGetOut" />
+ <wsdl:message name="lignesFacturationsHttpGetIn">
+  <wsdl:part name="idApplication" type="s:string" />
+  <wsdl:part name="produitsAImporter" type="s:string" />
+  <wsdl:part name="DateDebut" type="s:string" />
+  <wsdl:part name="DateFin" type="s:string" />
+  <wsdl:part name="CodeCarteUsager" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="lignesFacturationsHttpGetOut">
+  <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+ <wsdl:message name="DsListeUsagersHttpGetIn">
+  <wsdl:part name="titulaireId" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="DsListeUsagersHttpGetOut">
+  <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+ <wsdl:message name="XmlListeUsagersHttpGetIn">
+  <wsdl:part name="titulaireId" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlListeUsagersHttpGetOut">
+  <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+ <wsdl:message name="MAJStatutTraitementPartenaireHttpGetIn">
+  <wsdl:part name="pTypeTraitement" type="s:string" />
+  <wsdl:part name="pCodeTraitement" type="s:string" />
+  <wsdl:part name="pStatut" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="MAJStatutTraitementPartenaireHttpGetOut" />
+ <wsdl:message name="XmlRechercherActeursHttpGetIn">
+  <wsdl:part name="NomActeur" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlRechercherActeursHttpGetOut">
+  <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlRechercherActeursNivHttpGetIn">
+  <wsdl:part name="NomActeur" type="s:string" />
+  <wsdl:part name="Niveau" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlRechercherActeursNivHttpGetOut">
+  <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+ <wsdl:message name="AjouterUneTransactionTerminalHttpGetIn">
+  <wsdl:part name="CodeTerminal" type="s:string" />
+  <wsdl:part name="DateTransaction" type="s:string" />
+  <wsdl:part name="IdUsager" type="s:string" />
+  <wsdl:part name="CodeContrat" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="AjouterUneTransactionTerminalHttpGetOut">
+  <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlRegulariserTransactionHttpGetIn">
+  <wsdl:part name="dateTransaction" type="s:string" />
+  <wsdl:part name="codeTerminal" type="s:string" />
+  <wsdl:part name="idUniqueContrat" type="s:string" />
+  <wsdl:part name="codeTransaction" type="s:string" />
+  <wsdl:part name="creationOuSuppression" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlRegulariserTransactionHttpGetOut">
+  <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+ <wsdl:message name="RegulariserTransactionHttpGetIn">
+  <wsdl:part name="dateTransaction" type="s:string" />
+  <wsdl:part name="codeTerminal" type="s:string" />
+  <wsdl:part name="idUniqueContrat" type="s:string" />
+  <wsdl:part name="codeTransaction" type="s:string" />
+  <wsdl:part name="creationOuSuppression" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="RegulariserTransactionHttpGetOut">
+  <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoTransactionsHttpGetIn">
+  <wsdl:part name="TypeApplication" type="s:string" />
+  <wsdl:part name="CodeCentreGestion" type="s:string" />
+  <wsdl:part name="IdUsager" type="s:string" />
+  <wsdl:part name="DateDebut" type="s:string" />
+  <wsdl:part name="DateFin" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoTransactionsHttpGetOut">
+  <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoTransactionsParPrestationHttpGetIn">
+  <wsdl:part name="ReferencePrestation" type="s:string" />
+  <wsdl:part name="IdUsager" type="s:string" />
+  <wsdl:part name="DateDebut" type="s:string" />
+  <wsdl:part name="DateFin" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoTransactionsParPrestationHttpGetOut">
+  <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoTransactionsParTerminalHttpGetIn">
+  <wsdl:part name="CodeTerminal" type="s:string" />
+  <wsdl:part name="ReferencePrestation" type="s:string" />
+  <wsdl:part name="IdUsager" type="s:string" />
+  <wsdl:part name="DateDebut" type="s:string" />
+  <wsdl:part name="DateFin" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoTransactionsParTerminalHttpGetOut">
+  <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoTransactionsATraiterHttpGetIn">
+  <wsdl:part name="pReferencePrestation" type="s:string" />
+  <wsdl:part name="pIdUsager" type="s:string" />
+  <wsdl:part name="pDateDebut" type="s:string" />
+  <wsdl:part name="pDateFin" type="s:string" />
+  <wsdl:part name="pTypeTraitement" type="s:string" />
+  <wsdl:part name="pStatut" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoTransactionsATraiterHttpGetOut">
+  <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoTransactionsATraiterParTerminalHttpGetIn">
+  <wsdl:part name="CodeTerminal" type="s:string" />
+  <wsdl:part name="ReferencePrestation" type="s:string" />
+  <wsdl:part name="IdUsager" type="s:string" />
+  <wsdl:part name="DateDebut" type="s:string" />
+  <wsdl:part name="DateFin" type="s:string" />
+  <wsdl:part name="pTypeTraitement" type="s:string" />
+  <wsdl:part name="pStatut" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="XmlInfoTransactionsATraiterParTerminalHttpGetOut">
+  <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+ <wsdl:message name="DsInfoTransactionsHttpGetIn">
+  <wsdl:part name="TypeApplication" type="s:string" />
+  <wsdl:part name="CodeCentreGestion" type="s:string" />
+  <wsdl:part name="IdUsager" type="s:string" />
+  <wsdl:part name="DateDebut" type="s:string" />
+  <wsdl:part name="DateFin" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="DsInfoTransactionsHttpGetOut">
+  <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+ <wsdl:message name="DsInfoTransactionsParPrestationHttpGetIn">
+  <wsdl:part name="ReferencePrestation" type="s:string" />
+  <wsdl:part name="IdUsager" type="s:string" />
+  <wsdl:part name="DateDebut" type="s:string" />
+  <wsdl:part name="DateFin" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="DsInfoTransactionsParPrestationHttpGetOut">
+  <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+ <wsdl:message name="DsInfoTransactionsParTerminalHttpGetIn">
+  <wsdl:part name="CodeTerminal" type="s:string" />
+  <wsdl:part name="ReferencePrestation" type="s:string" />
+  <wsdl:part name="IdUsager" type="s:string" />
+  <wsdl:part name="DateDebut" type="s:string" />
+  <wsdl:part name="DateFin" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="DsInfoTransactionsParTerminalHttpGetOut">
+  <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+ <wsdl:message name="RequeteExportTransactionsHttpGetIn">
+  <wsdl:part name="TypeApplication" type="s:string" />
+  <wsdl:part name="CodeCentreGestion" type="s:string" />
+  <wsdl:part name="IdUsager" type="s:string" />
+  <wsdl:part name="DateDebut" type="s:string" />
+  <wsdl:part name="DateFin" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="RequeteExportTransactionsHttpGetOut">
+  <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+ <wsdl:message name="RequeteExportTransactionsParPrestationHttpGetIn">
+  <wsdl:part name="ReferencePrestation" type="s:string" />
+  <wsdl:part name="IdUsager" type="s:string" />
+  <wsdl:part name="DateDebut" type="s:string" />
+  <wsdl:part name="DateFin" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="RequeteExportTransactionsParPrestationHttpGetOut">
+  <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+ <wsdl:message name="DsObtenirDetailParGuidContratHttpGetIn">
+  <wsdl:part name="GuidContrat" type="s:string" />
+  </wsdl:message>
+ <wsdl:message name="DsObtenirDetailParGuidContratHttpGetOut">
+  <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="VersionServiceWebHttpGetIn" />
+ <wsdl:message name="VersionServiceWebHttpGetOut">
+  <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+ <wsdl:portType name="ICVQSmartIntegralSoap">
+ <wsdl:operation name="AffecterUneClasse">
+  <wsdl:input message="tns:AffecterUneClasseSoapIn" />
+  <wsdl:output message="tns:AffecterUneClasseSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="AffecterRemplacerSupport">
+  <wsdl:input message="tns:AffecterRemplacerSupportSoapIn" />
+  <wsdl:output message="tns:AffecterRemplacerSupportSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="AjouterUneClasse">
+  <wsdl:input message="tns:AjouterUneClasseSoapIn" />
+  <wsdl:output message="tns:AjouterUneClasseSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="AjouterUnEtablissementScolaire">
+  <wsdl:input message="tns:AjouterUnEtablissementScolaireSoapIn" />
+  <wsdl:output message="tns:AjouterUnEtablissementScolaireSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterComptes">
+  <wsdl:input message="tns:XmlAjouterComptesSoapIn" />
+  <wsdl:output message="tns:XmlAjouterComptesSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterContrats">
+  <wsdl:input message="tns:XmlAjouterContratsSoapIn" />
+  <wsdl:output message="tns:XmlAjouterContratsSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterContratsV2">
+  <wsdl:input message="tns:XmlAjouterContratsV2SoapIn" />
+  <wsdl:output message="tns:XmlAjouterContratsV2SoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterCreditsCompte">
+  <wsdl:input message="tns:XmlAjouterCreditsCompteSoapIn" />
+  <wsdl:output message="tns:XmlAjouterCreditsCompteSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterDebitsCompte">
+  <wsdl:input message="tns:XmlAjouterDebitsCompteSoapIn" />
+  <wsdl:output message="tns:XmlAjouterDebitsCompteSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterLiensContratsTerminaux">
+  <wsdl:input message="tns:XmlAjouterLiensContratsTerminauxSoapIn" />
+  <wsdl:output message="tns:XmlAjouterLiensContratsTerminauxSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="AjouterLienUsagerTitulaire">
+  <wsdl:input message="tns:AjouterLienUsagerTitulaireSoapIn" />
+  <wsdl:output message="tns:AjouterLienUsagerTitulaireSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterInscriptions">
+  <wsdl:input message="tns:XmlAjouterInscriptionsSoapIn" />
+  <wsdl:output message="tns:XmlAjouterInscriptionsSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterResponsables">
+  <wsdl:input message="tns:XmlAjouterResponsablesSoapIn" />
+  <wsdl:output message="tns:XmlAjouterResponsablesSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterTitulaire">
+  <wsdl:input message="tns:XmlAjouterTitulaireSoapIn" />
+  <wsdl:output message="tns:XmlAjouterTitulaireSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterUsager">
+  <wsdl:input message="tns:XmlAjouterUsagerSoapIn" />
+  <wsdl:output message="tns:XmlAjouterUsagerSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlCommanderLotSupports">
+  <wsdl:input message="tns:XmlCommanderLotSupportsSoapIn" />
+  <wsdl:output message="tns:XmlCommanderLotSupportsSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlComptesTitulaire">
+  <wsdl:input message="tns:XmlComptesTitulaireSoapIn" />
+  <wsdl:output message="tns:XmlComptesTitulaireSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="DsComptesTitulaire">
+  <wsdl:input message="tns:DsComptesTitulaireSoapIn" />
+  <wsdl:output message="tns:DsComptesTitulaireSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlConsommationsComptesTitulaire">
+  <wsdl:input message="tns:XmlConsommationsComptesTitulaireSoapIn" />
+  <wsdl:output message="tns:XmlConsommationsComptesTitulaireSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="testAppel">
+  <wsdl:input message="tns:testAppelSoapIn" />
+  <wsdl:output message="tns:testAppelSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="DsConsommationsComptesTitulaire">
+  <wsdl:input message="tns:DsConsommationsComptesTitulaireSoapIn" />
+  <wsdl:output message="tns:DsConsommationsComptesTitulaireSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlConsommationsComptesTitulaireParCentreGestion">
+  <wsdl:input message="tns:XmlConsommationsComptesTitulaireParCentreGestionSoapIn" />
+  <wsdl:output message="tns:XmlConsommationsComptesTitulaireParCentreGestionSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="DsConsommationsComptesTitulaireParCentreGestion">
+  <wsdl:input message="tns:DsConsommationsComptesTitulaireParCentreGestionSoapIn" />
+  <wsdl:output message="tns:DsConsommationsComptesTitulaireParCentreGestionSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlDonnerGUID">
+  <wsdl:input message="tns:XmlDonnerGUIDSoapIn" />
+  <wsdl:output message="tns:XmlDonnerGUIDSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="DsDonnerGUID">
+  <wsdl:input message="tns:DsDonnerGUIDSoapIn" />
+  <wsdl:output message="tns:DsDonnerGUIDSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="DonnerIdCVQ">
+  <wsdl:input message="tns:DonnerIdCVQSoapIn" />
+  <wsdl:output message="tns:DonnerIdCVQSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterUnEvenement">
+  <wsdl:input message="tns:XmlAjouterUnEvenementSoapIn" />
+  <wsdl:output message="tns:XmlAjouterUnEvenementSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XMLInfoEvtAsync">
+  <wsdl:input message="tns:XMLInfoEvtAsyncSoapIn" />
+  <wsdl:output message="tns:XMLInfoEvtAsyncSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoActeur">
+  <wsdl:input message="tns:XmlInfoActeurSoapIn" />
+  <wsdl:output message="tns:XmlInfoActeurSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoActeurV2">
+  <wsdl:input message="tns:XmlInfoActeurV2SoapIn" />
+  <wsdl:output message="tns:XmlInfoActeurV2SoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoActeurNumSerie">
+  <wsdl:input message="tns:XmlInfoActeurNumSerieSoapIn" />
+  <wsdl:output message="tns:XmlInfoActeurNumSerieSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoActeurNumSerieV2">
+  <wsdl:input message="tns:XmlInfoActeurNumSerieV2SoapIn" />
+  <wsdl:output message="tns:XmlInfoActeurNumSerieV2SoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoActeurId">
+  <wsdl:input message="tns:XmlInfoActeurIdSoapIn" />
+  <wsdl:output message="tns:XmlInfoActeurIdSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoContrats">
+  <wsdl:input message="tns:XmlInfoContratsSoapIn" />
+  <wsdl:output message="tns:XmlInfoContratsSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="DsInfoContrats">
+  <wsdl:input message="tns:DsInfoContratsSoapIn" />
+  <wsdl:output message="tns:DsInfoContratsSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoInscriptionsContrats">
+  <wsdl:input message="tns:XmlInfoInscriptionsContratsSoapIn" />
+  <wsdl:output message="tns:XmlInfoInscriptionsContratsSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="DsInfoInscriptionsContrats">
+  <wsdl:input message="tns:DsInfoInscriptionsContratsSoapIn" />
+  <wsdl:output message="tns:DsInfoInscriptionsContratsSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoPrestations">
+  <wsdl:input message="tns:XmlInfoPrestationsSoapIn" />
+  <wsdl:output message="tns:XmlInfoPrestationsSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="DsInfoPrestations">
+  <wsdl:input message="tns:DsInfoPrestationsSoapIn" />
+  <wsdl:output message="tns:DsInfoPrestationsSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfosQuotients">
+  <wsdl:input message="tns:XmlInfosQuotientsSoapIn" />
+  <wsdl:output message="tns:XmlInfosQuotientsSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="DsInfosQuotients">
+  <wsdl:input message="tns:DsInfosQuotientsSoapIn" />
+  <wsdl:output message="tns:DsInfosQuotientsSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="DsInfosReglements">
+  <wsdl:input message="tns:DsInfosReglementsSoapIn" />
+  <wsdl:output message="tns:DsInfosReglementsSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfosReglements">
+  <wsdl:input message="tns:XmlInfosReglementsSoapIn" />
+  <wsdl:output message="tns:XmlInfosReglementsSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="DsInfoServices">
+  <wsdl:input message="tns:DsInfoServicesSoapIn" />
+  <wsdl:output message="tns:DsInfoServicesSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoSupportsActeur">
+  <wsdl:input message="tns:XmlInfoSupportsActeurSoapIn" />
+  <wsdl:output message="tns:XmlInfoSupportsActeurSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoTitulaire">
+  <wsdl:input message="tns:XmlInfoTitulaireSoapIn" />
+  <wsdl:output message="tns:XmlInfoTitulaireSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="DsInfoTitulaire">
+  <wsdl:input message="tns:DsInfoTitulaireSoapIn" />
+  <wsdl:output message="tns:DsInfoTitulaireSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoVersionBaseDonnees">
+  <wsdl:input message="tns:XmlInfoVersionBaseDonneesSoapIn" />
+  <wsdl:output message="tns:XmlInfoVersionBaseDonneesSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="DsInfoVersionBaseDonnees">
+  <wsdl:input message="tns:DsInfoVersionBaseDonneesSoapIn" />
+  <wsdl:output message="tns:DsInfoVersionBaseDonneesSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XMLInfoServeurPresent">
+  <wsdl:input message="tns:XMLInfoServeurPresentSoapIn" />
+  <wsdl:output message="tns:XMLInfoServeurPresentSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="DsInfoServeurPresent">
+  <wsdl:input message="tns:DsInfoServeurPresentSoapIn" />
+  <wsdl:output message="tns:DsInfoServeurPresentSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="IDescenteBambiTerm">
+  <wsdl:input message="tns:IDescenteBambiTermSoapIn" />
+  <wsdl:output message="tns:IDescenteBambiTermSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="InfosParamsServices">
+  <wsdl:input message="tns:InfosParamsServicesSoapIn" />
+  <wsdl:output message="tns:InfosParamsServicesSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="ImporterLignesFacturation">
+  <wsdl:input message="tns:ImporterLignesFacturationSoapIn" />
+  <wsdl:output message="tns:ImporterLignesFacturationSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="lignesFacturations">
+  <wsdl:input message="tns:lignesFacturationsSoapIn" />
+  <wsdl:output message="tns:lignesFacturationsSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="DsListeUsagers">
+  <wsdl:input message="tns:DsListeUsagersSoapIn" />
+  <wsdl:output message="tns:DsListeUsagersSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlListeUsagers">
+  <wsdl:input message="tns:XmlListeUsagersSoapIn" />
+  <wsdl:output message="tns:XmlListeUsagersSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="MAJStatutTraitementPartenaire">
+  <wsdl:input message="tns:MAJStatutTraitementPartenaireSoapIn" />
+  <wsdl:output message="tns:MAJStatutTraitementPartenaireSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlRechercherActeurs">
+  <wsdl:input message="tns:XmlRechercherActeursSoapIn" />
+  <wsdl:output message="tns:XmlRechercherActeursSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlRechercherActeursNiv">
+  <wsdl:input message="tns:XmlRechercherActeursNivSoapIn" />
+  <wsdl:output message="tns:XmlRechercherActeursNivSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="AjouterUneTransactionTerminal">
+  <wsdl:input message="tns:AjouterUneTransactionTerminalSoapIn" />
+  <wsdl:output message="tns:AjouterUneTransactionTerminalSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlRegulariserTransaction">
+  <wsdl:input message="tns:XmlRegulariserTransactionSoapIn" />
+  <wsdl:output message="tns:XmlRegulariserTransactionSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="RegulariserTransaction">
+  <wsdl:input message="tns:RegulariserTransactionSoapIn" />
+  <wsdl:output message="tns:RegulariserTransactionSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoTransactions">
+  <wsdl:input message="tns:XmlInfoTransactionsSoapIn" />
+  <wsdl:output message="tns:XmlInfoTransactionsSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoTransactionsParPrestation">
+  <wsdl:input message="tns:XmlInfoTransactionsParPrestationSoapIn" />
+  <wsdl:output message="tns:XmlInfoTransactionsParPrestationSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoTransactionsParTerminal">
+  <wsdl:input message="tns:XmlInfoTransactionsParTerminalSoapIn" />
+  <wsdl:output message="tns:XmlInfoTransactionsParTerminalSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoTransactionsATraiter">
+  <wsdl:input message="tns:XmlInfoTransactionsATraiterSoapIn" />
+  <wsdl:output message="tns:XmlInfoTransactionsATraiterSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoTransactionsATraiterParTerminal">
+  <wsdl:input message="tns:XmlInfoTransactionsATraiterParTerminalSoapIn" />
+  <wsdl:output message="tns:XmlInfoTransactionsATraiterParTerminalSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="DsInfoTransactions">
+  <wsdl:input message="tns:DsInfoTransactionsSoapIn" />
+  <wsdl:output message="tns:DsInfoTransactionsSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="DsInfoTransactionsParPrestation">
+  <wsdl:input message="tns:DsInfoTransactionsParPrestationSoapIn" />
+  <wsdl:output message="tns:DsInfoTransactionsParPrestationSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="DsInfoTransactionsParTerminal">
+  <wsdl:input message="tns:DsInfoTransactionsParTerminalSoapIn" />
+  <wsdl:output message="tns:DsInfoTransactionsParTerminalSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="RequeteExportTransactions">
+  <wsdl:input message="tns:RequeteExportTransactionsSoapIn" />
+  <wsdl:output message="tns:RequeteExportTransactionsSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="RequeteExportTransactionsParPrestation">
+  <wsdl:input message="tns:RequeteExportTransactionsParPrestationSoapIn" />
+  <wsdl:output message="tns:RequeteExportTransactionsParPrestationSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="DsObtenirDetailParGuidContrat">
+  <wsdl:input message="tns:DsObtenirDetailParGuidContratSoapIn" />
+  <wsdl:output message="tns:DsObtenirDetailParGuidContratSoapOut" />
+  </wsdl:operation>
+ <wsdl:operation name="VersionServiceWeb">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Version du service Web.</wsdl:documentation>
+  <wsdl:input message="tns:VersionServiceWebSoapIn" />
+  <wsdl:output message="tns:VersionServiceWebSoapOut" />
+  </wsdl:operation>
+  </wsdl:portType>
+ <wsdl:portType name="ICVQSmartIntegralHttpGet">
+ <wsdl:operation name="AffecterUneClasse">
+  <wsdl:input message="tns:AffecterUneClasseHttpGetIn" />
+  <wsdl:output message="tns:AffecterUneClasseHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="AffecterRemplacerSupport">
+  <wsdl:input message="tns:AffecterRemplacerSupportHttpGetIn" />
+  <wsdl:output message="tns:AffecterRemplacerSupportHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="AjouterUneClasse">
+  <wsdl:input message="tns:AjouterUneClasseHttpGetIn" />
+  <wsdl:output message="tns:AjouterUneClasseHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="AjouterUnEtablissementScolaire">
+  <wsdl:input message="tns:AjouterUnEtablissementScolaireHttpGetIn" />
+  <wsdl:output message="tns:AjouterUnEtablissementScolaireHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterComptes">
+  <wsdl:input message="tns:XmlAjouterComptesHttpGetIn" />
+  <wsdl:output message="tns:XmlAjouterComptesHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterContrats">
+  <wsdl:input message="tns:XmlAjouterContratsHttpGetIn" />
+  <wsdl:output message="tns:XmlAjouterContratsHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterContratsV2">
+  <wsdl:input message="tns:XmlAjouterContratsV2HttpGetIn" />
+  <wsdl:output message="tns:XmlAjouterContratsV2HttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterCreditsCompte">
+  <wsdl:input message="tns:XmlAjouterCreditsCompteHttpGetIn" />
+  <wsdl:output message="tns:XmlAjouterCreditsCompteHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterDebitsCompte">
+  <wsdl:input message="tns:XmlAjouterDebitsCompteHttpGetIn" />
+  <wsdl:output message="tns:XmlAjouterDebitsCompteHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterLiensContratsTerminaux">
+  <wsdl:input message="tns:XmlAjouterLiensContratsTerminauxHttpGetIn" />
+  <wsdl:output message="tns:XmlAjouterLiensContratsTerminauxHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="AjouterLienUsagerTitulaire">
+  <wsdl:input message="tns:AjouterLienUsagerTitulaireHttpGetIn" />
+  <wsdl:output message="tns:AjouterLienUsagerTitulaireHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterInscriptions">
+  <wsdl:input message="tns:XmlAjouterInscriptionsHttpGetIn" />
+  <wsdl:output message="tns:XmlAjouterInscriptionsHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterResponsables">
+  <wsdl:input message="tns:XmlAjouterResponsablesHttpGetIn" />
+  <wsdl:output message="tns:XmlAjouterResponsablesHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterTitulaire">
+  <wsdl:input message="tns:XmlAjouterTitulaireHttpGetIn" />
+  <wsdl:output message="tns:XmlAjouterTitulaireHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterUsager">
+  <wsdl:input message="tns:XmlAjouterUsagerHttpGetIn" />
+  <wsdl:output message="tns:XmlAjouterUsagerHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlCommanderLotSupports">
+  <wsdl:input message="tns:XmlCommanderLotSupportsHttpGetIn" />
+  <wsdl:output message="tns:XmlCommanderLotSupportsHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlComptesTitulaire">
+  <wsdl:input message="tns:XmlComptesTitulaireHttpGetIn" />
+  <wsdl:output message="tns:XmlComptesTitulaireHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="DsComptesTitulaire">
+  <wsdl:input message="tns:DsComptesTitulaireHttpGetIn" />
+  <wsdl:output message="tns:DsComptesTitulaireHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlConsommationsComptesTitulaire">
+  <wsdl:input message="tns:XmlConsommationsComptesTitulaireHttpGetIn" />
+  <wsdl:output message="tns:XmlConsommationsComptesTitulaireHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="testAppel">
+  <wsdl:input message="tns:testAppelHttpGetIn" />
+  <wsdl:output message="tns:testAppelHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="DsConsommationsComptesTitulaire">
+  <wsdl:input message="tns:DsConsommationsComptesTitulaireHttpGetIn" />
+  <wsdl:output message="tns:DsConsommationsComptesTitulaireHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlConsommationsComptesTitulaireParCentreGestion">
+  <wsdl:input message="tns:XmlConsommationsComptesTitulaireParCentreGestionHttpGetIn" />
+  <wsdl:output message="tns:XmlConsommationsComptesTitulaireParCentreGestionHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="DsConsommationsComptesTitulaireParCentreGestion">
+  <wsdl:input message="tns:DsConsommationsComptesTitulaireParCentreGestionHttpGetIn" />
+  <wsdl:output message="tns:DsConsommationsComptesTitulaireParCentreGestionHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlDonnerGUID">
+  <wsdl:input message="tns:XmlDonnerGUIDHttpGetIn" />
+  <wsdl:output message="tns:XmlDonnerGUIDHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="DsDonnerGUID">
+  <wsdl:input message="tns:DsDonnerGUIDHttpGetIn" />
+  <wsdl:output message="tns:DsDonnerGUIDHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="DonnerIdCVQ">
+  <wsdl:input message="tns:DonnerIdCVQHttpGetIn" />
+  <wsdl:output message="tns:DonnerIdCVQHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterUnEvenement">
+  <wsdl:input message="tns:XmlAjouterUnEvenementHttpGetIn" />
+  <wsdl:output message="tns:XmlAjouterUnEvenementHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XMLInfoEvtAsync">
+  <wsdl:input message="tns:XMLInfoEvtAsyncHttpGetIn" />
+  <wsdl:output message="tns:XMLInfoEvtAsyncHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoActeur">
+  <wsdl:input message="tns:XmlInfoActeurHttpGetIn" />
+  <wsdl:output message="tns:XmlInfoActeurHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoActeurV2">
+  <wsdl:input message="tns:XmlInfoActeurV2HttpGetIn" />
+  <wsdl:output message="tns:XmlInfoActeurV2HttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoActeurNumSerie">
+  <wsdl:input message="tns:XmlInfoActeurNumSerieHttpGetIn" />
+  <wsdl:output message="tns:XmlInfoActeurNumSerieHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoActeurNumSerieV2">
+  <wsdl:input message="tns:XmlInfoActeurNumSerieV2HttpGetIn" />
+  <wsdl:output message="tns:XmlInfoActeurNumSerieV2HttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoActeurId">
+  <wsdl:input message="tns:XmlInfoActeurIdHttpGetIn" />
+  <wsdl:output message="tns:XmlInfoActeurIdHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoContrats">
+  <wsdl:input message="tns:XmlInfoContratsHttpGetIn" />
+  <wsdl:output message="tns:XmlInfoContratsHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="DsInfoContrats">
+  <wsdl:input message="tns:DsInfoContratsHttpGetIn" />
+  <wsdl:output message="tns:DsInfoContratsHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoInscriptionsContrats">
+  <wsdl:input message="tns:XmlInfoInscriptionsContratsHttpGetIn" />
+  <wsdl:output message="tns:XmlInfoInscriptionsContratsHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="DsInfoInscriptionsContrats">
+  <wsdl:input message="tns:DsInfoInscriptionsContratsHttpGetIn" />
+  <wsdl:output message="tns:DsInfoInscriptionsContratsHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoPrestations">
+  <wsdl:input message="tns:XmlInfoPrestationsHttpGetIn" />
+  <wsdl:output message="tns:XmlInfoPrestationsHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="DsInfoPrestations">
+  <wsdl:input message="tns:DsInfoPrestationsHttpGetIn" />
+  <wsdl:output message="tns:DsInfoPrestationsHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfosQuotients">
+  <wsdl:input message="tns:XmlInfosQuotientsHttpGetIn" />
+  <wsdl:output message="tns:XmlInfosQuotientsHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="DsInfosQuotients">
+  <wsdl:input message="tns:DsInfosQuotientsHttpGetIn" />
+  <wsdl:output message="tns:DsInfosQuotientsHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="DsInfosReglements">
+  <wsdl:input message="tns:DsInfosReglementsHttpGetIn" />
+  <wsdl:output message="tns:DsInfosReglementsHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfosReglements">
+  <wsdl:input message="tns:XmlInfosReglementsHttpGetIn" />
+  <wsdl:output message="tns:XmlInfosReglementsHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="DsInfoServices">
+  <wsdl:input message="tns:DsInfoServicesHttpGetIn" />
+  <wsdl:output message="tns:DsInfoServicesHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoSupportsActeur">
+  <wsdl:input message="tns:XmlInfoSupportsActeurHttpGetIn" />
+  <wsdl:output message="tns:XmlInfoSupportsActeurHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoTitulaire">
+  <wsdl:input message="tns:XmlInfoTitulaireHttpGetIn" />
+  <wsdl:output message="tns:XmlInfoTitulaireHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="DsInfoTitulaire">
+  <wsdl:input message="tns:DsInfoTitulaireHttpGetIn" />
+  <wsdl:output message="tns:DsInfoTitulaireHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoVersionBaseDonnees">
+  <wsdl:input message="tns:XmlInfoVersionBaseDonneesHttpGetIn" />
+  <wsdl:output message="tns:XmlInfoVersionBaseDonneesHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="DsInfoVersionBaseDonnees">
+  <wsdl:input message="tns:DsInfoVersionBaseDonneesHttpGetIn" />
+  <wsdl:output message="tns:DsInfoVersionBaseDonneesHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XMLInfoServeurPresent">
+  <wsdl:input message="tns:XMLInfoServeurPresentHttpGetIn" />
+  <wsdl:output message="tns:XMLInfoServeurPresentHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="DsInfoServeurPresent">
+  <wsdl:input message="tns:DsInfoServeurPresentHttpGetIn" />
+  <wsdl:output message="tns:DsInfoServeurPresentHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="IDescenteBambiTerm">
+  <wsdl:input message="tns:IDescenteBambiTermHttpGetIn" />
+  <wsdl:output message="tns:IDescenteBambiTermHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="InfosParamsServices">
+  <wsdl:input message="tns:InfosParamsServicesHttpGetIn" />
+  <wsdl:output message="tns:InfosParamsServicesHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="ImporterLignesFacturation">
+  <wsdl:input message="tns:ImporterLignesFacturationHttpGetIn" />
+  <wsdl:output message="tns:ImporterLignesFacturationHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="lignesFacturations">
+  <wsdl:input message="tns:lignesFacturationsHttpGetIn" />
+  <wsdl:output message="tns:lignesFacturationsHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="DsListeUsagers">
+  <wsdl:input message="tns:DsListeUsagersHttpGetIn" />
+  <wsdl:output message="tns:DsListeUsagersHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlListeUsagers">
+  <wsdl:input message="tns:XmlListeUsagersHttpGetIn" />
+  <wsdl:output message="tns:XmlListeUsagersHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="MAJStatutTraitementPartenaire">
+  <wsdl:input message="tns:MAJStatutTraitementPartenaireHttpGetIn" />
+  <wsdl:output message="tns:MAJStatutTraitementPartenaireHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlRechercherActeurs">
+  <wsdl:input message="tns:XmlRechercherActeursHttpGetIn" />
+  <wsdl:output message="tns:XmlRechercherActeursHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlRechercherActeursNiv">
+  <wsdl:input message="tns:XmlRechercherActeursNivHttpGetIn" />
+  <wsdl:output message="tns:XmlRechercherActeursNivHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="AjouterUneTransactionTerminal">
+  <wsdl:input message="tns:AjouterUneTransactionTerminalHttpGetIn" />
+  <wsdl:output message="tns:AjouterUneTransactionTerminalHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlRegulariserTransaction">
+  <wsdl:input message="tns:XmlRegulariserTransactionHttpGetIn" />
+  <wsdl:output message="tns:XmlRegulariserTransactionHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="RegulariserTransaction">
+  <wsdl:input message="tns:RegulariserTransactionHttpGetIn" />
+  <wsdl:output message="tns:RegulariserTransactionHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoTransactions">
+  <wsdl:input message="tns:XmlInfoTransactionsHttpGetIn" />
+  <wsdl:output message="tns:XmlInfoTransactionsHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoTransactionsParPrestation">
+  <wsdl:input message="tns:XmlInfoTransactionsParPrestationHttpGetIn" />
+  <wsdl:output message="tns:XmlInfoTransactionsParPrestationHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoTransactionsParTerminal">
+  <wsdl:input message="tns:XmlInfoTransactionsParTerminalHttpGetIn" />
+  <wsdl:output message="tns:XmlInfoTransactionsParTerminalHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoTransactionsATraiter">
+  <wsdl:input message="tns:XmlInfoTransactionsATraiterHttpGetIn" />
+  <wsdl:output message="tns:XmlInfoTransactionsATraiterHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoTransactionsATraiterParTerminal">
+  <wsdl:input message="tns:XmlInfoTransactionsATraiterParTerminalHttpGetIn" />
+  <wsdl:output message="tns:XmlInfoTransactionsATraiterParTerminalHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="DsInfoTransactions">
+  <wsdl:input message="tns:DsInfoTransactionsHttpGetIn" />
+  <wsdl:output message="tns:DsInfoTransactionsHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="DsInfoTransactionsParPrestation">
+  <wsdl:input message="tns:DsInfoTransactionsParPrestationHttpGetIn" />
+  <wsdl:output message="tns:DsInfoTransactionsParPrestationHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="DsInfoTransactionsParTerminal">
+  <wsdl:input message="tns:DsInfoTransactionsParTerminalHttpGetIn" />
+  <wsdl:output message="tns:DsInfoTransactionsParTerminalHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="RequeteExportTransactions">
+  <wsdl:input message="tns:RequeteExportTransactionsHttpGetIn" />
+  <wsdl:output message="tns:RequeteExportTransactionsHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="RequeteExportTransactionsParPrestation">
+  <wsdl:input message="tns:RequeteExportTransactionsParPrestationHttpGetIn" />
+  <wsdl:output message="tns:RequeteExportTransactionsParPrestationHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="DsObtenirDetailParGuidContrat">
+  <wsdl:input message="tns:DsObtenirDetailParGuidContratHttpGetIn" />
+  <wsdl:output message="tns:DsObtenirDetailParGuidContratHttpGetOut" />
+  </wsdl:operation>
+ <wsdl:operation name="VersionServiceWeb">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Version du service Web.</wsdl:documentation>
+  <wsdl:input message="tns:VersionServiceWebHttpGetIn" />
+  <wsdl:output message="tns:VersionServiceWebHttpGetOut" />
+  </wsdl:operation>
+  </wsdl:portType>
+ <wsdl:binding name="ICVQSmartIntegralSoap" type="tns:ICVQSmartIntegralSoap">
+  <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+ <wsdl:operation name="AffecterUneClasse">
+  <soap:operation soapAction="http://horanet.com/AffecterUneClasse" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="AffecterRemplacerSupport">
+  <soap:operation soapAction="http://horanet.com/AffecterRemplacerSupport" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="AjouterUneClasse">
+  <soap:operation soapAction="http://horanet.com/AjouterUneClasse" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="AjouterUnEtablissementScolaire">
+  <soap:operation soapAction="http://horanet.com/AjouterUnEtablissementScolaire" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterComptes">
+  <soap:operation soapAction="http://horanet.com/XmlAjouterComptes" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterContrats">
+  <soap:operation soapAction="http://horanet.com/XmlAjouterContrats" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterContratsV2">
+  <soap:operation soapAction="http://horanet.com/XmlAjouterContratsV2" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterCreditsCompte">
+  <soap:operation soapAction="http://horanet.com/XmlAjouterCreditsCompte" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterDebitsCompte">
+  <soap:operation soapAction="http://horanet.com/XmlAjouterDebitsCompte" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterLiensContratsTerminaux">
+  <soap:operation soapAction="http://horanet.com/XmlAjouterLiensContratsTerminaux" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="AjouterLienUsagerTitulaire">
+  <soap:operation soapAction="http://horanet.com/AjouterLienUsagerTitulaire" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterInscriptions">
+  <soap:operation soapAction="http://horanet.com/XmlAjouterInscriptions" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterResponsables">
+  <soap:operation soapAction="http://horanet.com/XmlAjouterResponsables" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterTitulaire">
+  <soap:operation soapAction="http://horanet.com/XmlAjouterTitulaire" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterUsager">
+  <soap:operation soapAction="http://horanet.com/XmlAjouterUsager" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlCommanderLotSupports">
+  <soap:operation soapAction="http://horanet.com/XmlCommanderLotSupports" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlComptesTitulaire">
+  <soap:operation soapAction="http://horanet.com/XmlComptesTitulaire" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsComptesTitulaire">
+  <soap:operation soapAction="http://horanet.com/DsComptesTitulaire" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlConsommationsComptesTitulaire">
+  <soap:operation soapAction="http://horanet.com/XmlConsommationsComptesTitulaire" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="testAppel">
+  <soap:operation soapAction="http://horanet.com/testAppel" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsConsommationsComptesTitulaire">
+  <soap:operation soapAction="http://horanet.com/DsConsommationsComptesTitulaire" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlConsommationsComptesTitulaireParCentreGestion">
+  <soap:operation soapAction="http://horanet.com/XmlConsommationsComptesTitulaireParCentreGestion" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsConsommationsComptesTitulaireParCentreGestion">
+  <soap:operation soapAction="http://horanet.com/DsConsommationsComptesTitulaireParCentreGestion" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlDonnerGUID">
+  <soap:operation soapAction="http://horanet.com/XmlDonnerGUID" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsDonnerGUID">
+  <soap:operation soapAction="http://horanet.com/DsDonnerGUID" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DonnerIdCVQ">
+  <soap:operation soapAction="http://horanet.com/DonnerIdCVQ" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterUnEvenement">
+  <soap:operation soapAction="http://horanet.com/XmlAjouterUnEvenement" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XMLInfoEvtAsync">
+  <soap:operation soapAction="http://horanet.com/XMLInfoEvtAsync" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoActeur">
+  <soap:operation soapAction="http://horanet.com/XmlInfoActeur" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoActeurV2">
+  <soap:operation soapAction="http://horanet.com/XmlInfoActeurV2" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoActeurNumSerie">
+  <soap:operation soapAction="http://horanet.com/XmlInfoActeurNumSerie" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoActeurNumSerieV2">
+  <soap:operation soapAction="http://horanet.com/XmlInfoActeurNumSerieV2" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoActeurId">
+  <soap:operation soapAction="http://horanet.com/XmlInfoActeurId" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoContrats">
+  <soap:operation soapAction="http://horanet.com/XmlInfoContrats" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsInfoContrats">
+  <soap:operation soapAction="http://horanet.com/DsInfoContrats" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoInscriptionsContrats">
+  <soap:operation soapAction="http://horanet.com/XmlInfoInscriptionsContrats" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsInfoInscriptionsContrats">
+  <soap:operation soapAction="http://horanet.com/DsInfoInscriptionsContrats" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoPrestations">
+  <soap:operation soapAction="http://horanet.com/XmlInfoPrestations" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsInfoPrestations">
+  <soap:operation soapAction="http://horanet.com/DsInfoPrestations" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfosQuotients">
+  <soap:operation soapAction="http://horanet.com/XmlInfosQuotients" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsInfosQuotients">
+  <soap:operation soapAction="http://horanet.com/DsInfosQuotients" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsInfosReglements">
+  <soap:operation soapAction="http://horanet.com/DsInfosReglements" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfosReglements">
+  <soap:operation soapAction="http://horanet.com/XmlInfosReglements" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsInfoServices">
+  <soap:operation soapAction="http://horanet.com/DsInfoServices" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoSupportsActeur">
+  <soap:operation soapAction="http://horanet.com/XmlInfoSupportsActeur" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoTitulaire">
+  <soap:operation soapAction="http://horanet.com/XmlInfoTitulaire" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsInfoTitulaire">
+  <soap:operation soapAction="http://horanet.com/DsInfoTitulaire" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoVersionBaseDonnees">
+  <soap:operation soapAction="http://horanet.com/XmlInfoVersionBaseDonnees" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsInfoVersionBaseDonnees">
+  <soap:operation soapAction="http://horanet.com/DsInfoVersionBaseDonnees" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XMLInfoServeurPresent">
+  <soap:operation soapAction="http://horanet.com/XMLInfoServeurPresent" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsInfoServeurPresent">
+  <soap:operation soapAction="http://horanet.com/DsInfoServeurPresent" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="IDescenteBambiTerm">
+  <soap:operation soapAction="http://horanet.com/IDescenteBambiTerm" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="InfosParamsServices">
+  <soap:operation soapAction="http://horanet.com/InfosParamsServices" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="ImporterLignesFacturation">
+  <soap:operation soapAction="http://horanet.com/ImporterLignesFacturation" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="lignesFacturations">
+  <soap:operation soapAction="http://horanet.com/lignesFacturations" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsListeUsagers">
+  <soap:operation soapAction="http://horanet.com/DsListeUsagers" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlListeUsagers">
+  <soap:operation soapAction="http://horanet.com/XmlListeUsagers" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="MAJStatutTraitementPartenaire">
+  <soap:operation soapAction="http://horanet.com/MAJStatutTraitementPartenaire" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlRechercherActeurs">
+  <soap:operation soapAction="http://horanet.com/XmlRechercherActeurs" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlRechercherActeursNiv">
+  <soap:operation soapAction="http://horanet.com/XmlRechercherActeursNiv" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="AjouterUneTransactionTerminal">
+  <soap:operation soapAction="http://horanet.com/AjouterUneTransactionTerminal" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlRegulariserTransaction">
+  <soap:operation soapAction="http://horanet.com/XmlRegulariserTransaction" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="RegulariserTransaction">
+  <soap:operation soapAction="http://horanet.com/RegulariserTransaction" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoTransactions">
+  <soap:operation soapAction="http://horanet.com/XmlInfoTransactions" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoTransactionsParPrestation">
+  <soap:operation soapAction="http://horanet.com/XmlInfoTransactionsParPrestation" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoTransactionsParTerminal">
+  <soap:operation soapAction="http://horanet.com/XmlInfoTransactionsParTerminal" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoTransactionsATraiter">
+  <soap:operation soapAction="http://horanet.com/XmlInfoTransactionsATraiter" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoTransactionsATraiterParTerminal">
+  <soap:operation soapAction="http://horanet.com/XmlInfoTransactionsATraiterParTerminal" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsInfoTransactions">
+  <soap:operation soapAction="http://horanet.com/DsInfoTransactions" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsInfoTransactionsParPrestation">
+  <soap:operation soapAction="http://horanet.com/DsInfoTransactionsParPrestation" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsInfoTransactionsParTerminal">
+  <soap:operation soapAction="http://horanet.com/DsInfoTransactionsParTerminal" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="RequeteExportTransactions">
+  <soap:operation soapAction="http://horanet.com/RequeteExportTransactions" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="RequeteExportTransactionsParPrestation">
+  <soap:operation soapAction="http://horanet.com/RequeteExportTransactionsParPrestation" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsObtenirDetailParGuidContrat">
+  <soap:operation soapAction="http://horanet.com/DsObtenirDetailParGuidContrat" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="VersionServiceWeb">
+  <soap:operation soapAction="http://horanet.com/VersionServiceWeb" style="document" />
+ <wsdl:input>
+  <soap:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+  </wsdl:binding>
+ <wsdl:binding name="ICVQSmartIntegralSoap12" type="tns:ICVQSmartIntegralSoap">
+  <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+ <wsdl:operation name="AffecterUneClasse">
+  <soap12:operation soapAction="http://horanet.com/AffecterUneClasse" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="AffecterRemplacerSupport">
+  <soap12:operation soapAction="http://horanet.com/AffecterRemplacerSupport" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="AjouterUneClasse">
+  <soap12:operation soapAction="http://horanet.com/AjouterUneClasse" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="AjouterUnEtablissementScolaire">
+  <soap12:operation soapAction="http://horanet.com/AjouterUnEtablissementScolaire" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterComptes">
+  <soap12:operation soapAction="http://horanet.com/XmlAjouterComptes" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterContrats">
+  <soap12:operation soapAction="http://horanet.com/XmlAjouterContrats" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterContratsV2">
+  <soap12:operation soapAction="http://horanet.com/XmlAjouterContratsV2" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterCreditsCompte">
+  <soap12:operation soapAction="http://horanet.com/XmlAjouterCreditsCompte" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterDebitsCompte">
+  <soap12:operation soapAction="http://horanet.com/XmlAjouterDebitsCompte" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterLiensContratsTerminaux">
+  <soap12:operation soapAction="http://horanet.com/XmlAjouterLiensContratsTerminaux" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="AjouterLienUsagerTitulaire">
+  <soap12:operation soapAction="http://horanet.com/AjouterLienUsagerTitulaire" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterInscriptions">
+  <soap12:operation soapAction="http://horanet.com/XmlAjouterInscriptions" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterResponsables">
+  <soap12:operation soapAction="http://horanet.com/XmlAjouterResponsables" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterTitulaire">
+  <soap12:operation soapAction="http://horanet.com/XmlAjouterTitulaire" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterUsager">
+  <soap12:operation soapAction="http://horanet.com/XmlAjouterUsager" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlCommanderLotSupports">
+  <soap12:operation soapAction="http://horanet.com/XmlCommanderLotSupports" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlComptesTitulaire">
+  <soap12:operation soapAction="http://horanet.com/XmlComptesTitulaire" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsComptesTitulaire">
+  <soap12:operation soapAction="http://horanet.com/DsComptesTitulaire" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlConsommationsComptesTitulaire">
+  <soap12:operation soapAction="http://horanet.com/XmlConsommationsComptesTitulaire" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="testAppel">
+  <soap12:operation soapAction="http://horanet.com/testAppel" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsConsommationsComptesTitulaire">
+  <soap12:operation soapAction="http://horanet.com/DsConsommationsComptesTitulaire" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlConsommationsComptesTitulaireParCentreGestion">
+  <soap12:operation soapAction="http://horanet.com/XmlConsommationsComptesTitulaireParCentreGestion" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsConsommationsComptesTitulaireParCentreGestion">
+  <soap12:operation soapAction="http://horanet.com/DsConsommationsComptesTitulaireParCentreGestion" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlDonnerGUID">
+  <soap12:operation soapAction="http://horanet.com/XmlDonnerGUID" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsDonnerGUID">
+  <soap12:operation soapAction="http://horanet.com/DsDonnerGUID" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DonnerIdCVQ">
+  <soap12:operation soapAction="http://horanet.com/DonnerIdCVQ" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterUnEvenement">
+  <soap12:operation soapAction="http://horanet.com/XmlAjouterUnEvenement" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XMLInfoEvtAsync">
+  <soap12:operation soapAction="http://horanet.com/XMLInfoEvtAsync" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoActeur">
+  <soap12:operation soapAction="http://horanet.com/XmlInfoActeur" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoActeurV2">
+  <soap12:operation soapAction="http://horanet.com/XmlInfoActeurV2" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoActeurNumSerie">
+  <soap12:operation soapAction="http://horanet.com/XmlInfoActeurNumSerie" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoActeurNumSerieV2">
+  <soap12:operation soapAction="http://horanet.com/XmlInfoActeurNumSerieV2" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoActeurId">
+  <soap12:operation soapAction="http://horanet.com/XmlInfoActeurId" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoContrats">
+  <soap12:operation soapAction="http://horanet.com/XmlInfoContrats" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsInfoContrats">
+  <soap12:operation soapAction="http://horanet.com/DsInfoContrats" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoInscriptionsContrats">
+  <soap12:operation soapAction="http://horanet.com/XmlInfoInscriptionsContrats" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsInfoInscriptionsContrats">
+  <soap12:operation soapAction="http://horanet.com/DsInfoInscriptionsContrats" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoPrestations">
+  <soap12:operation soapAction="http://horanet.com/XmlInfoPrestations" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsInfoPrestations">
+  <soap12:operation soapAction="http://horanet.com/DsInfoPrestations" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfosQuotients">
+  <soap12:operation soapAction="http://horanet.com/XmlInfosQuotients" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsInfosQuotients">
+  <soap12:operation soapAction="http://horanet.com/DsInfosQuotients" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsInfosReglements">
+  <soap12:operation soapAction="http://horanet.com/DsInfosReglements" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfosReglements">
+  <soap12:operation soapAction="http://horanet.com/XmlInfosReglements" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsInfoServices">
+  <soap12:operation soapAction="http://horanet.com/DsInfoServices" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoSupportsActeur">
+  <soap12:operation soapAction="http://horanet.com/XmlInfoSupportsActeur" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoTitulaire">
+  <soap12:operation soapAction="http://horanet.com/XmlInfoTitulaire" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsInfoTitulaire">
+  <soap12:operation soapAction="http://horanet.com/DsInfoTitulaire" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoVersionBaseDonnees">
+  <soap12:operation soapAction="http://horanet.com/XmlInfoVersionBaseDonnees" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsInfoVersionBaseDonnees">
+  <soap12:operation soapAction="http://horanet.com/DsInfoVersionBaseDonnees" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XMLInfoServeurPresent">
+  <soap12:operation soapAction="http://horanet.com/XMLInfoServeurPresent" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsInfoServeurPresent">
+  <soap12:operation soapAction="http://horanet.com/DsInfoServeurPresent" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="IDescenteBambiTerm">
+  <soap12:operation soapAction="http://horanet.com/IDescenteBambiTerm" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="InfosParamsServices">
+  <soap12:operation soapAction="http://horanet.com/InfosParamsServices" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="ImporterLignesFacturation">
+  <soap12:operation soapAction="http://horanet.com/ImporterLignesFacturation" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="lignesFacturations">
+  <soap12:operation soapAction="http://horanet.com/lignesFacturations" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsListeUsagers">
+  <soap12:operation soapAction="http://horanet.com/DsListeUsagers" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlListeUsagers">
+  <soap12:operation soapAction="http://horanet.com/XmlListeUsagers" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="MAJStatutTraitementPartenaire">
+  <soap12:operation soapAction="http://horanet.com/MAJStatutTraitementPartenaire" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlRechercherActeurs">
+  <soap12:operation soapAction="http://horanet.com/XmlRechercherActeurs" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlRechercherActeursNiv">
+  <soap12:operation soapAction="http://horanet.com/XmlRechercherActeursNiv" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="AjouterUneTransactionTerminal">
+  <soap12:operation soapAction="http://horanet.com/AjouterUneTransactionTerminal" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlRegulariserTransaction">
+  <soap12:operation soapAction="http://horanet.com/XmlRegulariserTransaction" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="RegulariserTransaction">
+  <soap12:operation soapAction="http://horanet.com/RegulariserTransaction" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoTransactions">
+  <soap12:operation soapAction="http://horanet.com/XmlInfoTransactions" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoTransactionsParPrestation">
+  <soap12:operation soapAction="http://horanet.com/XmlInfoTransactionsParPrestation" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoTransactionsParTerminal">
+  <soap12:operation soapAction="http://horanet.com/XmlInfoTransactionsParTerminal" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoTransactionsATraiter">
+  <soap12:operation soapAction="http://horanet.com/XmlInfoTransactionsATraiter" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoTransactionsATraiterParTerminal">
+  <soap12:operation soapAction="http://horanet.com/XmlInfoTransactionsATraiterParTerminal" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsInfoTransactions">
+  <soap12:operation soapAction="http://horanet.com/DsInfoTransactions" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsInfoTransactionsParPrestation">
+  <soap12:operation soapAction="http://horanet.com/DsInfoTransactionsParPrestation" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsInfoTransactionsParTerminal">
+  <soap12:operation soapAction="http://horanet.com/DsInfoTransactionsParTerminal" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="RequeteExportTransactions">
+  <soap12:operation soapAction="http://horanet.com/RequeteExportTransactions" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="RequeteExportTransactionsParPrestation">
+  <soap12:operation soapAction="http://horanet.com/RequeteExportTransactionsParPrestation" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsObtenirDetailParGuidContrat">
+  <soap12:operation soapAction="http://horanet.com/DsObtenirDetailParGuidContrat" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="VersionServiceWeb">
+  <soap12:operation soapAction="http://horanet.com/VersionServiceWeb" style="document" />
+ <wsdl:input>
+  <soap12:body use="literal" />
+  </wsdl:input>
+ <wsdl:output>
+  <soap12:body use="literal" />
+  </wsdl:output>
+  </wsdl:operation>
+  </wsdl:binding>
+ <wsdl:binding name="ICVQSmartIntegralHttpGet" type="tns:ICVQSmartIntegralHttpGet">
+  <http:binding verb="GET" />
+ <wsdl:operation name="AffecterUneClasse">
+  <http:operation location="/AffecterUneClasse" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="AffecterRemplacerSupport">
+  <http:operation location="/AffecterRemplacerSupport" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="AjouterUneClasse">
+  <http:operation location="/AjouterUneClasse" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="AjouterUnEtablissementScolaire">
+  <http:operation location="/AjouterUnEtablissementScolaire" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterComptes">
+  <http:operation location="/XmlAjouterComptes" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterContrats">
+  <http:operation location="/XmlAjouterContrats" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterContratsV2">
+  <http:operation location="/XmlAjouterContratsV2" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterCreditsCompte">
+  <http:operation location="/XmlAjouterCreditsCompte" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterDebitsCompte">
+  <http:operation location="/XmlAjouterDebitsCompte" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterLiensContratsTerminaux">
+  <http:operation location="/XmlAjouterLiensContratsTerminaux" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="AjouterLienUsagerTitulaire">
+  <http:operation location="/AjouterLienUsagerTitulaire" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterInscriptions">
+  <http:operation location="/XmlAjouterInscriptions" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterResponsables">
+  <http:operation location="/XmlAjouterResponsables" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterTitulaire">
+  <http:operation location="/XmlAjouterTitulaire" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterUsager">
+  <http:operation location="/XmlAjouterUsager" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlCommanderLotSupports">
+  <http:operation location="/XmlCommanderLotSupports" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlComptesTitulaire">
+  <http:operation location="/XmlComptesTitulaire" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsComptesTitulaire">
+  <http:operation location="/DsComptesTitulaire" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlConsommationsComptesTitulaire">
+  <http:operation location="/XmlConsommationsComptesTitulaire" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="testAppel">
+  <http:operation location="/testAppel" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsConsommationsComptesTitulaire">
+  <http:operation location="/DsConsommationsComptesTitulaire" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlConsommationsComptesTitulaireParCentreGestion">
+  <http:operation location="/XmlConsommationsComptesTitulaireParCentreGestion" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsConsommationsComptesTitulaireParCentreGestion">
+  <http:operation location="/DsConsommationsComptesTitulaireParCentreGestion" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlDonnerGUID">
+  <http:operation location="/XmlDonnerGUID" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsDonnerGUID">
+  <http:operation location="/DsDonnerGUID" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DonnerIdCVQ">
+  <http:operation location="/DonnerIdCVQ" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlAjouterUnEvenement">
+  <http:operation location="/XmlAjouterUnEvenement" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XMLInfoEvtAsync">
+  <http:operation location="/XMLInfoEvtAsync" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoActeur">
+  <http:operation location="/XmlInfoActeur" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoActeurV2">
+  <http:operation location="/XmlInfoActeurV2" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoActeurNumSerie">
+  <http:operation location="/XmlInfoActeurNumSerie" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoActeurNumSerieV2">
+  <http:operation location="/XmlInfoActeurNumSerieV2" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoActeurId">
+  <http:operation location="/XmlInfoActeurId" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoContrats">
+  <http:operation location="/XmlInfoContrats" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsInfoContrats">
+  <http:operation location="/DsInfoContrats" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoInscriptionsContrats">
+  <http:operation location="/XmlInfoInscriptionsContrats" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsInfoInscriptionsContrats">
+  <http:operation location="/DsInfoInscriptionsContrats" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoPrestations">
+  <http:operation location="/XmlInfoPrestations" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsInfoPrestations">
+  <http:operation location="/DsInfoPrestations" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfosQuotients">
+  <http:operation location="/XmlInfosQuotients" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsInfosQuotients">
+  <http:operation location="/DsInfosQuotients" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsInfosReglements">
+  <http:operation location="/DsInfosReglements" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfosReglements">
+  <http:operation location="/XmlInfosReglements" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsInfoServices">
+  <http:operation location="/DsInfoServices" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoSupportsActeur">
+  <http:operation location="/XmlInfoSupportsActeur" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoTitulaire">
+  <http:operation location="/XmlInfoTitulaire" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsInfoTitulaire">
+  <http:operation location="/DsInfoTitulaire" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoVersionBaseDonnees">
+  <http:operation location="/XmlInfoVersionBaseDonnees" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsInfoVersionBaseDonnees">
+  <http:operation location="/DsInfoVersionBaseDonnees" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XMLInfoServeurPresent">
+  <http:operation location="/XMLInfoServeurPresent" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsInfoServeurPresent">
+  <http:operation location="/DsInfoServeurPresent" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="IDescenteBambiTerm">
+  <http:operation location="/IDescenteBambiTerm" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+  <wsdl:output />
+  </wsdl:operation>
+ <wsdl:operation name="InfosParamsServices">
+  <http:operation location="/InfosParamsServices" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="ImporterLignesFacturation">
+  <http:operation location="/ImporterLignesFacturation" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+  <wsdl:output />
+  </wsdl:operation>
+ <wsdl:operation name="lignesFacturations">
+  <http:operation location="/lignesFacturations" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsListeUsagers">
+  <http:operation location="/DsListeUsagers" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlListeUsagers">
+  <http:operation location="/XmlListeUsagers" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="MAJStatutTraitementPartenaire">
+  <http:operation location="/MAJStatutTraitementPartenaire" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+  <wsdl:output />
+  </wsdl:operation>
+ <wsdl:operation name="XmlRechercherActeurs">
+  <http:operation location="/XmlRechercherActeurs" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlRechercherActeursNiv">
+  <http:operation location="/XmlRechercherActeursNiv" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="AjouterUneTransactionTerminal">
+  <http:operation location="/AjouterUneTransactionTerminal" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlRegulariserTransaction">
+  <http:operation location="/XmlRegulariserTransaction" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="RegulariserTransaction">
+  <http:operation location="/RegulariserTransaction" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoTransactions">
+  <http:operation location="/XmlInfoTransactions" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoTransactionsParPrestation">
+  <http:operation location="/XmlInfoTransactionsParPrestation" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoTransactionsParTerminal">
+  <http:operation location="/XmlInfoTransactionsParTerminal" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoTransactionsATraiter">
+  <http:operation location="/XmlInfoTransactionsATraiter" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="XmlInfoTransactionsATraiterParTerminal">
+  <http:operation location="/XmlInfoTransactionsATraiterParTerminal" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsInfoTransactions">
+  <http:operation location="/DsInfoTransactions" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsInfoTransactionsParPrestation">
+  <http:operation location="/DsInfoTransactionsParPrestation" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsInfoTransactionsParTerminal">
+  <http:operation location="/DsInfoTransactionsParTerminal" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="RequeteExportTransactions">
+  <http:operation location="/RequeteExportTransactions" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="RequeteExportTransactionsParPrestation">
+  <http:operation location="/RequeteExportTransactionsParPrestation" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="DsObtenirDetailParGuidContrat">
+  <http:operation location="/DsObtenirDetailParGuidContrat" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+ <wsdl:operation name="VersionServiceWeb">
+  <http:operation location="/VersionServiceWeb" />
+ <wsdl:input>
+  <http:urlEncoded />
+  </wsdl:input>
+ <wsdl:output>
+  <mime:mimeXml part="Body" />
+  </wsdl:output>
+  </wsdl:operation>
+  </wsdl:binding>
+ <wsdl:service name="ICVQSmartIntegral">
+ <wsdl:port name="ICVQSmartIntegralSoap" binding="tns:ICVQSmartIntegralSoap">
+  <soap:address location="http://cvq.intra.cc-parthenay-gatine.fr/ICVQSmartIntegral_dev/ICVQSmartIntegral.asmx" />
+  </wsdl:port>
+ <wsdl:port name="ICVQSmartIntegralSoap12" binding="tns:ICVQSmartIntegralSoap12">
+  <soap12:address location="http://cvq.intra.cc-parthenay-gatine.fr/ICVQSmartIntegral_dev/ICVQSmartIntegral.asmx" />
+  </wsdl:port>
+ <wsdl:port name="ICVQSmartIntegralHttpGet" binding="tns:ICVQSmartIntegralHttpGet">
+  <http:address location="http://cvq.intra.cc-parthenay-gatine.fr/ICVQSmartIntegral_dev/ICVQSmartIntegral.asmx" />
+  </wsdl:port>
+  </wsdl:service>
+  </wsdl:definitions>

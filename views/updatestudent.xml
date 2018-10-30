@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+<!-- Validation -->
+        <record id="student_update_validate" model="ir.ui.view">
+            <field name="name">Student Update Validate</field>
+            <field name="model">ecole.student.update</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group col="2">
+                        <div class="textvalidation">
+                            <p>Prise en compte validé !</p>
+                        </div>
+                    </group>
+                    <footer>
+                        <button string="OK" class="oe_right" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+<!-- PASSAGE D'ANNEE SCOLAIRE -->
+        <record id="student_update_view" model="ir.ui.view">
+            <field name="name">Student Update Views</field>
+            <field name="model">ecole.student.update</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group groups="ecole.group_ecole_inscription_scolaire" >
+                        <field name="school_name_id" required="True" />
+                        <field name="school_year_id" required="True" />
+                        <field name="school_level_id" required="True" />
+                        <field name="student_ids" widget="many2many_list">
+                            <tree string="Tree_view_update_student">
+                                <field name="partner_id" />
+                                <field name="school_year_id" />
+                                <field name="school_name_id" />
+                                <field name="school_level_id" />
+                            </tree>
+                            <form>
+                                <group col="2">
+                                    <div class="accessforbidden">
+                                        <p>Pas d'accès !</p>
+                                    </div>
+                                </group>
+                            </form>
+                        </field>
+                    </group>
+                    <footer groups="ecole.group_ecole_inscription_scolaire">
+                        <button name="set_student_level" string="Move to the next level" class="oe_right oe_highlight"
+                                type="object" confirm="Vous allez faire un passage de fin d'année. Continuer ?"/>
+                        <button string="Cancel" class="oe_right" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <act_window id="student_update_action"
+                    name="School year pass"
+                    res_model="ecole.student.update"
+                    src_model="ecole.partner.school"
+                    view_mode="form"
+                    view_id="student_update_view"
+                    target="new"
+                    multi="True" />
+<!-- FIN PASSAGE D'ANNEE SCOLAIRE -->
+
+<!-- PASSAGE D'ANNEE SCOLAIRE INSCRIPTION CANTINE -->
+
+        <record id="student_update_halfpension_view" model="ir.ui.view">
+            <field name="name">Student Update Halfpension Views</field>
+            <field name="model">ecole.halfpension.update</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="half_pension"/>
+                        <field name="half_pension_id" required="True" />
+                        <field name="begin_date" required="True" />
+                        <field name="end_date" required="True" />
+                        <field name="student_ids" widget="many2many_list">
+                            <tree string="Tree_view_update_student">
+                                <field name="partner_id" />
+                                <field name="school_year_id" />
+                                <field name="school_name_id" />
+                                <field name="half_pension_id" />
+                                <field name="half_pension_begin_date" />
+                                <field name="half_pension_end_date" />
+                            </tree>
+                            <form>
+                                <group col="2">
+                                    <div class="accessforbidden">
+                                        <p>Pas d'accès !</p>
+                                    </div>
+                                </group>
+                            </form>
+                        </field>
+                    </group>
+                    <footer>
+                        <button name="set_student_halfpension" string="Passage school catering" class="oe_right oe_highlight"
+                                type="object" confirm="Vous validez votre choix ?" />
+                        <button string="Cancel" class="oe_right" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <act_window id="student_update_halfpension_action"
+                    name="Passage registration school catering"
+                    res_model="ecole.halfpension.update"
+                    src_model="ecole.partner.school"
+                    view_mode="form"
+                    view_id="student_update_halfpension_view"
+                    target="new"
+                    multi="True" />
+
+<!-- FIN PASSAGE D'ANNEE SCOLAIRE INSCRIPTION CANTINE -->
+
+</odoo>

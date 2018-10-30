@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+        <!-- Vue Form enfants scolarisés cantine-->
+        <record model="ir.ui.view" id="halfpension_view_form">
+            <field name="name">halfpension.view.form</field>
+            <field name="model">ecole.partner.school</field>
+            <field name="arch" type="xml">
+                <form name="halfpension_form" string="school_halfpension_form">
+                    <sheet>
+                        <group col="2">
+                            <field name="partner_id" readonly="1"/>
+                            <field name="school_year_id_rel" readonly="1"/>
+                            <field name="school_lvl" invisible="1" />
+                        </group>
+                        <notebook colspan="4">
+                            <page name="school_registration" string="School registration">
+                                <group col="4" string="Informations">
+                                    <field name="school_name_id" readonly="1" />
+                                    <field name="school_level_id" domain="[('id','>=',school_lvl)]" readonly="1" />
+                                </group>
+                                <group col="2">
+                                    <field name="school_year_id" readonly="1" />
+                                    <field name="school_registration" readonly="1" />
+                                    <field name="school_end_date" readonly="1" />
+                                </group>
+                            </page>
+                            <page name="halfpension_tab" string="Catering" groups="ecole.group_ecole_restauration_scolaire">
+                                <group col="2" string="Registration School Restoration">
+                                    <field name="half_pension" />
+                                </group>
+                                <group col="4" attrs="{'invisible': [('half_pension','=', False)]}">
+                                    <field name="responsible_partner" required="True"/>
+                                    <field name="half_pension_id" required="True"/>
+                                    <field name="half_pension_begin_date" required="True"/>
+                                    <field name="half_pension_end_date" required="True"/>
+                                </group>
+                                <group col="4" attrs="{'invisible': [('half_pension','=', False)]}">
+                                    <field name="half_pension_occasional"/>
+                                    <field name="half_pension_without_bulletin"/>
+                                </group>
+                                <group col="4" groups="ecole.group_ecole_restauration_scolaire" attrs="{'invisible': [('half_pension','=', False)]}">
+                                    <field name="half_pension_monday" attrs="{'readonly': [('half_pension_occasional','=', True)]}"/>
+                                    <field name="half_pension_allergy"/>
+                                    <field name="half_pension_tuesday" attrs="{'readonly': [('half_pension_occasional','=', True)]}"/>
+                                    <field name="half_pension_without_pork"/>
+                                    <field name="half_pension_wednesday"/>
+                                    <field name="half_pension_without_meat"/>
+                                    <field name="half_pension_thursday" attrs="{'readonly': [('half_pension_occasional','=', True)]}"/><newline/>
+                                    <field name="half_pension_friday" attrs="{'readonly': [('half_pension_occasional','=', True)]}"/>
+                                </group>
+                                <group col="2" attrs="{'invisible': [('half_pension','=', False)]}">
+                                    <field name="half_pension_text"
+                                           placeholder="Comments..."/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+    <!-- Vue Tree enfants scolarisés cantine-->
+        <record model="ir.ui.view" id="halfpension_view_tree">
+            <field name="name">halfpension.view.tree</field>
+            <field name="model">ecole.partner.school</field>
+            <field name="arch" type="xml">
+                <tree default_order="half_pension_id" string="school_halfpension_tree">
+                    <field name="partner_id" readonly="1" />
+                    <field name="half_pension" />
+                    <field name="half_pension_id" />
+                    <field name="school_name_id" />
+                    <field name="half_pension_begin_date" />
+                    <field name="half_pension_end_date" />
+                    <field name="half_pension_text" />
+                    <field name="half_pension_specification" />
+                    <field name="half_pension_previous" />
+                    <field name="default_school_year" invisible="1" />
+                </tree>
+            </field>
+        </record>
+
+        <!-- action qui fait référence à la vue -->
+        <record model='ir.actions.act_window' id='ecole.cantinelist'>
+            <field name="name">Student school meals list</field>
+            <field name="res_model">ecole.partner.school</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{'search_default_anneescolaire':1,'search_default_inscritcantine':1,'search_default_etablissements':1,'search_default_niveaux':1,'search_default_demipension':1}</field> <!-- PERMET D'AJOUTER FILTRE PAR DEFAULT-->
+        </record>
+
+        <record id="act_halfpension_form_view" model="ir.actions.act_window.view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="halfpension_view_form"/>
+            <field name="act_window_id" ref="ecole.cantinelist"/>
+        </record>
+
+        <record id="act_halfpension_tree_view" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="halfpension_view_tree"/>
+            <field name="act_window_id" ref="ecole.cantinelist"/>
+        </record>
+
+</odoo>

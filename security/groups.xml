@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="group_admin_ecole" model="res.groups">
+        <field name="name">School Administrator</field>
+        <field name="category_id" ref="ecole.ecole_category"/>
+        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        <field name="comment">Administrator Group for Institutional Management.</field>
+    </record>
+
+    <record id="group_ecole_restauration_scolaire" model="res.groups">
+        <field name="name">School catering</field>
+        <field name="category_id" ref="ecole.ecole_category"/>
+        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        <field name="comment">Standard group for the management of school meals.</field>
+    </record>
+
+    <record id="group_gutenberg_restauration_scolaire" model="res.groups">
+        <field name="name">School catering - GUTENBERG</field>
+        <field name="category_id" ref="ecole.ecole_category"/>
+        <field name="comment">School catering group of schools of - Parthenay.</field>
+    </record>
+
+    <record id="group_pompaire_restauration_scolaire" model="res.groups">
+        <field name="name">School catering - POMPAIRE</field>
+        <field name="category_id" ref="ecole.ecole_category"/>
+        <field name="comment">School catering group of schools of - Pompaire.</field>
+    </record>
+
+    <record id="group_ecole_inscription_scolaire" model="res.groups">
+        <field name="name">School children management</field>
+        <field name="category_id" ref="ecole.ecole_category"/>
+        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        <field name="comment">Standard Group for School Registration Management.</field>
+    </record>
+
+    <record id="group_ecole_garderie" model="res.groups">
+        <field name="name">Nursery</field>
+        <field name="category_id" ref="ecole.ecole_category"/>
+        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        <field name="comment">Standard group for day care management.</field>
+    </record>
+</odoo>

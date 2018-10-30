@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="ecole.report_certificate">
+        <t t-call="report.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="report.external_layout">
+                    <div class="page">
+                        <img t-att-src="'https://www.gourge.fr/wp-content/uploads/2015/07/logoccpg.png'"/><br/><br/>
+                        <div style="border: 1px solid #0290bf;">
+                            <center>
+                                <p style="color:#0290bf!important;font-size:25px;font-weight:bold;">Certificat Scolaire</p>
+                            </center>
+                        </div>
+                        <br/><br/>
+                        <center>
+                            <p style="color:#0290bf!important;font-size:25px;font-weight:bold;">
+                            <span t-field="o.school_name_id"/><br/>
+                            <span t-field="o.school_year_id"/>
+                            </p>
+                        </center>
+                        <br/><br/><br/><br/>
+
+                        <p>Je sousigné ......................................, certifie que l'élève <span t-field="o.partner_id"/><br/>
+                        résidant <span t-field = "o.partner_id.better_contact_address" /></p>
+                        <br/><br/>
+                        <p> est inscrit(e) sur le registre de l'école <span style="font-weight:bold" t-field="o.school_name_id"/><br/>
+                            et fréquente la classe de <span style="font-weight:bold" t-field="o.school_level_id"/></p>
+                        <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+                        <p>Fait à ...................................... le  <span t-esc="time.strftime('%d-%m-%Y')"/></p>
+
+                        <t t-set="my_name" t-value="'ECOLE DE PARTHENAY - Gutemberg'.split()"/>
+                        <t t-esc="my_name[2]"/>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+    <report id="ecole.report_certif"
+            name="ecole.report_certificate"
+            file="ecole.report_certificate"
+            model="ecole.partner.school"
+            report_type="qweb-pdf"
+            string="Certificat scolaire"
+            menu="True" />
+</odoo>

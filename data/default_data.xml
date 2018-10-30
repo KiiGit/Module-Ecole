@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="first_line" model="ecole.partner.school.years">
+            <field name="school_years">2017 - 2018</field>
+            <field name="year_begin_date">2017-09-01</field>
+            <field name="year_end_date">2018-07-05</field>
+            <field name="default_school_year">False</field>
+            <field name="period_school_year">False</field>
+            <field name="active">True</field>
+        </record>
+        <record id="second_line" model="ecole.partner.school.years">
+            <field name="school_years">2018 - 2019</field>
+            <field name="year_begin_date">2018-09-01</field>
+            <field name="year_end_date">2019-07-05</field>
+            <field name="default_school_year">True</field>
+            <field name="period_school_year">False</field>
+            <field name="active">True</field>
+        </record>
+        <record id="three_line" model="ecole.partner.school.years">
+            <field name="school_years">2019 - 2020</field>
+            <field name="year_begin_date">2019-09-01</field>
+            <field name="year_end_date">2020-07-05</field>
+            <field name="default_school_year">False</field>
+            <field name="period_school_year">True</field>
+            <field name="active">True</field>
+        </record>
+        <record id="four_line" model="ecole.partner.school.years">
+            <field name="school_years">2020 - 2021</field>
+            <field name="year_begin_date">2020-09-01</field>
+            <field name="year_end_date">2021-07-05</field>
+            <field name="default_school_year">False</field>
+            <field name="period_school_year">False</field>
+            <field name="active">True</field>
+        </record>
+
+        <record id="first_line_canteen" model="ecole.halfpension.school">
+            <field name="name">Restau. Scol. PARTHENAY</field>
+            <field name="code_Product">PR6</field>
+            <field name="code_CDG">13634968</field>
+            <field name="code_Catalog">1</field>
+        </record>
+    </data>
+</odoo>

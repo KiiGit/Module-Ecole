@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="ecole_category" model="ir.module.category">
+            <field name="name">School</field>
+            <field name="description">User access level for this module</field>
+            <field name="sequence">3</field>
+        </record>
+    </data>
+</odoo>

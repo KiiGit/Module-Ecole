@@ -1,0 +1,805 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* ecole
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-18 11:03+0000\n"
+"PO-Revision-Date: 2018-10-18 11:03+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ecole
+#: model:ir.ui.view,arch_db:ecole.school_years_view_id_form
+msgid "20xx - 20xx"
+msgstr "20xx - 20xx"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_years_active_8944
+msgid "Active"
+msgstr "Actif"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_resp_address1
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_resp_address2
+msgid "Address"
+msgstr "Adresse"
+
+#. module: ecole
+#: model:res.groups,comment:ecole.group_admin_ecole
+msgid "Administrator Group for Institutional Management."
+msgstr "Groupe administrateur pour la gestion Ecole."
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_res_partner_difference_age
+#: model:ir.model.fields,field_description:ecole.field_res_users_difference_age
+msgid "Age"
+msgstr "Âge"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_school_registration
+msgid "Beginning"
+msgstr "Début"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_half_pension_binary_value
+msgid "Binary value"
+msgstr "Valeur binaire"
+
+#. module: ecole
+#: model:ir.ui.view,arch_db:ecole.student_update_halfpension_view
+#: model:ir.ui.view,arch_db:ecole.student_update_view
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: ecole
+#: model:ir.ui.view,arch_db:ecole.student_update_view
+msgid "Canteen registration"
+msgstr "Inscription restauration"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_half_pension
+#: model:ir.ui.menu,name:ecole.ecole_listcantine
+#: model:ir.ui.view,arch_db:ecole.School_tab
+#: model:ir.ui.view,arch_db:ecole.halfpension_view_form
+#: model:ir.ui.view,arch_db:ecole.student_view_form
+msgid "Catering"
+msgstr "Restauration"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_partner_id
+msgid "Child"
+msgstr "Enfant"
+
+#. module: ecole
+#: model:ir.ui.view,arch_db:ecole.School_tab
+msgid "Citizen School"
+msgstr "Scolarité citoyen"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_resp_civility1
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_resp_civility2
+msgid "Civility"
+msgstr "Civilité"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_halfpension_school_create_uid
+#: model:ir.model.fields,field_description:ecole.field_ecole_halfpension_update_create_uid
+#: model:ir.model.fields,field_description:ecole.field_ecole_nursery_school_create_uid
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_years_create_uid
+#: model:ir.model.fields,field_description:ecole.field_ecole_student_update_create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_halfpension_school_create_date
+#: model:ir.model.fields,field_description:ecole.field_ecole_halfpension_update_create_date
+#: model:ir.model.fields,field_description:ecole.field_ecole_nursery_school_create_date
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_years_create_date
+#: model:ir.model.fields,field_description:ecole.field_ecole_student_update_create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_years_default_school_year
+msgid "Current school year"
+msgstr "Année scolaire en cours"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_default_school_year
+#: model:ir.ui.view,arch_db:ecole.student_view_search
+msgid "Current year"
+msgstr "Année en cours"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_half_pension_days_value
+msgid "Days value"
+msgstr "Valeur jours"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_halfpension_school_display_name
+#: model:ir.model.fields,field_description:ecole.field_ecole_halfpension_update_display_name
+#: model:ir.model.fields,field_description:ecole.field_ecole_nursery_school_display_name
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_display_name
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_years_display_name
+#: model:ir.model.fields,field_description:ecole.field_ecole_student_update_display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_halfpension_update_end_date
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_half_pension_end_date
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_nursery_end_date
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_school_end_date
+msgid "End"
+msgstr "Fin"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_years_year_end_date
+msgid "End date"
+msgstr "Date de fin"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_school_name_id
+msgid "Establishment"
+msgstr "Établissement"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_student_update_school_name_id
+msgid "Establishments"
+msgstr "Établissements"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_resp_filiation1
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_resp_filiation2
+msgid "Filiation"
+msgstr "Filiation"
+
+#. module: ecole
+#: model:ir.ui.view,arch_db:ecole.School_tab
+msgid "Form_view_school"
+msgstr "Form_view_school"
+
+#. module: ecole
+#: model:ir.ui.view,arch_db:ecole.school_years_view_id_form
+msgid "Form_years_school"
+msgstr "Form_years_school"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_half_pension_friday
+msgid "Friday"
+msgstr "Vendredi"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_nursery_friday_evening
+msgid "Friday evening"
+msgstr "Vendredi soir"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_nursery_friday_morning
+msgid "Friday morning"
+msgstr "Vendredi matin"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_halfpension_school_group_id
+msgid "Group"
+msgstr "Groupe"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_halfpension_school_id
+#: model:ir.model.fields,field_description:ecole.field_ecole_halfpension_update_id
+#: model:ir.model.fields,field_description:ecole.field_ecole_nursery_school_id
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_years_id
+#: model:ir.model.fields,field_description:ecole.field_ecole_student_update_id
+msgid "ID"
+msgstr "ID"
+
+#. module: ecole
+#: model:ir.ui.view,arch_db:ecole.School_tab
+#: model:ir.ui.view,arch_db:ecole.halfpension_view_form
+#: model:ir.ui.view,arch_db:ecole.nursery_view_form
+#: model:ir.ui.view,arch_db:ecole.student_update_view
+#: model:ir.ui.view,arch_db:ecole.student_view_form
+msgid "Informations"
+msgstr "Informations"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_halfpension_school___last_update
+#: model:ir.model.fields,field_description:ecole.field_ecole_halfpension_update___last_update
+#: model:ir.model.fields,field_description:ecole.field_ecole_nursery_school___last_update
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school___last_update
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_years___last_update
+#: model:ir.model.fields,field_description:ecole.field_ecole_student_update___last_update
+msgid "Last Modified on"
+msgstr "Dernière Modification le"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_halfpension_school_write_uid
+#: model:ir.model.fields,field_description:ecole.field_ecole_halfpension_update_write_uid
+#: model:ir.model.fields,field_description:ecole.field_ecole_nursery_school_write_uid
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_years_write_uid
+#: model:ir.model.fields,field_description:ecole.field_ecole_student_update_write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_halfpension_school_write_date
+#: model:ir.model.fields,field_description:ecole.field_ecole_halfpension_update_write_date
+#: model:ir.model.fields,field_description:ecole.field_ecole_nursery_school_write_date
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_years_write_date
+#: model:ir.model.fields,field_description:ecole.field_ecole_student_update_write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_school_level_id
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_school_lvl
+#: model:ir.model.fields,field_description:ecole.field_ecole_student_update_school_level_id
+msgid "Level"
+msgstr "Niveau"
+
+#. module: ecole
+#: model:ir.actions.act_window,name:ecole.anneescolairelist
+msgid "List of school years"
+msgstr "Liste années scolaires"
+
+#. module: ecole
+#: model:ir.actions.act_window,name:ecole.elevelist
+msgid "List of students"
+msgstr "Liste des élèves"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_halfpension_school_code_CDG
+msgid "Management Center"
+msgstr "Centre de gestion"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_half_pension_monday
+msgid "Monday"
+msgstr "Lundi"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_nursery_monday_evening
+msgid "Monday evening"
+msgstr "Lundi soir"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_nursery_monday_morning
+msgid "Monday morning"
+msgstr "Lundi matin"
+
+#. module: ecole
+#: model:ir.ui.view,arch_db:ecole.student_update_view
+msgid "Move to the next level"
+msgstr "Passage au niveau suivant"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_halfpension_school_name
+msgid "Name"
+msgstr "Nom"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_resp_name1
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_resp_name2
+msgid "Name and First name"
+msgstr "Nom et Prénom"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_period_school_year
+#: model:ir.ui.view,arch_db:ecole.student_view_search
+msgid "Next year"
+msgstr "Année suivante"
+
+#. module: ecole
+#: model:ir.ui.view,arch_db:ecole.student_view_search
+msgid "Not registered school catering"
+msgstr "Non inscrit restauration scolaire"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_nursery
+#: model:ir.ui.menu,name:ecole.ecole_listgarderie
+#: model:ir.ui.view,arch_db:ecole.School_tab
+#: model:ir.ui.view,arch_db:ecole.nursery_view_form
+#: model:res.groups,name:ecole.group_ecole_garderie
+msgid "Nursery"
+msgstr "Garderie"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_nursery_evening
+#: model:ir.ui.view,arch_db:ecole.student_view_search
+msgid "Nursery evening"
+msgstr "Garderie soir"
+
+#. module: ecole
+#: model:ir.actions.act_window,name:ecole.garderielist
+msgid "Nursery list"
+msgstr "Liste élèves - Garderie"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_nursery_morning
+#: model:ir.ui.view,arch_db:ecole.student_view_search
+msgid "Nursery morning"
+msgstr "Garderie matin"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_nursery_school_name
+msgid "Nursery place"
+msgstr "Lieu garderie"
+
+#. module: ecole
+#: model:ir.ui.view,arch_db:ecole.School_tab
+#: model:ir.ui.view,arch_db:ecole.nursery_view_form
+#: model:ir.ui.view,arch_db:ecole.student_update_view
+msgid "Nursery registration"
+msgstr "Inscription garderie"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_half_pension_text
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_nursery_text
+#: model:ir.ui.view,arch_db:ecole.student_view_search
+msgid "Observations"
+msgstr "Observations"
+
+#. module: ecole
+#: model:ir.ui.menu,name:ecole.menu_param_content
+msgid "Parameters"
+msgstr "Paramètres"
+
+#. module: ecole
+#: model:ir.model,name:ecole.model_res_partner
+msgid "Partner"
+msgstr "Partenaire"
+
+#. module: ecole
+#: model:ir.actions.act_window,name:ecole.student_update_halfpension_action
+msgid "Passage registration school catering"
+msgstr "Passage d'inscription restauration scolaire"
+
+#. module: ecole
+#: model:ir.ui.view,arch_db:ecole.student_update_halfpension_view
+msgid "Passage school catering"
+msgstr "Passage inscription restauration"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_halfpension_update_school_year_id
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_school_year_id
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_school_year_id_rel
+#: model:ir.model.fields,field_description:ecole.field_ecole_student_update_school_year_id
+msgid "Period"
+msgstr "Période"
+
+#. module: ecole
+#: model:ir.ui.view,arch_db:ecole.School_tab
+#: model:ir.ui.view,arch_db:ecole.nursery_view_form
+msgid "Permissions person 1"
+msgstr "Autorisation personne 1"
+
+#. module: ecole
+#: model:ir.ui.view,arch_db:ecole.School_tab
+#: model:ir.ui.view,arch_db:ecole.nursery_view_form
+msgid "Permissions person 2"
+msgstr "Autorisation personne 2"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_resp_phone1
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_resp_phone2
+msgid "Phone"
+msgstr "Téléphone"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_halfpension_update_half_pension_id
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_half_pension_id
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_nursery_name_id
+msgid "Place"
+msgstr "Lieu"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_resp_cp1
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_resp_cp2
+msgid "Postal code"
+msgstr "Code Postal"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_halfpension_school_code_Product
+msgid "Product Code"
+msgstr "Code Produit"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_halfpension_school_code_Catalog
+msgid "Product catalogue"
+msgstr "Catalogue produit"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_halfpension_update_half_pension
+msgid "Registered"
+msgstr "Inscription"
+
+#. module: ecole
+#: model:ir.ui.view,arch_db:ecole.student_view_search
+msgid "Registered school catering"
+msgstr "Inscription restauration scolaire"
+
+#. module: ecole
+#: model:ir.ui.view,arch_db:ecole.student_update_view
+msgid "Registration"
+msgstr "Inscription"
+
+#. module: ecole
+#: model:ir.ui.view,arch_db:ecole.School_tab
+#: model:ir.ui.view,arch_db:ecole.halfpension_view_form
+#: model:ir.ui.view,arch_db:ecole.student_view_form
+msgid "Registration School Restoration"
+msgstr "Inscription restauration scolaire"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_years_period_school_year
+msgid "Registration period"
+msgstr "Période d'inscription"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_responsible_partner
+msgid "Responsible"
+msgstr "Responsable"
+
+#. module: ecole
+#: model:ir.ui.menu,name:ecole.ecole_halfpension_place
+msgid "Restoration place"
+msgstr "Lieu restauration"
+
+#. module: ecole
+#: model:ir.module.category,name:ecole.ecole_category
+#: model:ir.ui.menu,name:ecole.menu_school_content
+#: model:ir.ui.menu,name:ecole.school_menu
+#: model:ir.ui.view,arch_db:ecole.School_tab
+msgid "School"
+msgstr "Scolaire"
+
+#. module: ecole
+#: model:res.groups,name:ecole.group_admin_ecole
+msgid "School Administrator"
+msgstr "Administrateur Ecole"
+
+#. module: ecole
+#: model:ir.ui.menu,name:ecole.ecole_listeleve
+msgid "School Childrens"
+msgstr "Élèves"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_res_partner_scholarship_ids
+#: model:ir.model.fields,field_description:ecole.field_res_users_scholarship_ids
+msgid "School card"
+msgstr "Fiche scolaire"
+
+#. module: ecole
+#: model:ir.ui.view,arch_db:ecole.student_view_search
+#: model:res.groups,name:ecole.group_ecole_restauration_scolaire
+msgid "School catering"
+msgstr "Restauration scolaire"
+
+#. module: ecole
+#: model:res.groups,name:ecole.group_gutenberg_restauration_scolaire
+msgid "School catering - GUTENBERG"
+msgstr "Restauration scolaire - GUTENBERG"
+
+#. module: ecole
+#: model:res.groups,name:ecole.group_pompaire_restauration_scolaire
+msgid "School catering - POMPAIRE"
+msgstr "Restauration scolaire - POMPAIRE"
+
+#. module: ecole
+#: model:res.groups,comment:ecole.group_gutenberg_restauration_scolaire
+msgid "School catering group of schools of - Parthenay."
+msgstr "Groupe restauration scolaire de - Parthenay."
+
+#. module: ecole
+#: model:res.groups,comment:ecole.group_pompaire_restauration_scolaire
+msgid "School catering group of schools of - Pompaire."
+msgstr "Groupe restauration scolaire de - Pompaire."
+
+#. module: ecole
+#: model:ir.actions.act_window,name:ecole.halfpension_place
+msgid "School catering place"
+msgstr "Lieu restauration scolaire"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_res_partner_school_certificate
+#: model:ir.model.fields,field_description:ecole.field_res_users_school_certificate
+msgid "School certificate"
+msgstr "Certificat de scolarité"
+
+#. module: ecole
+#: model:res.groups,name:ecole.group_ecole_inscription_scolaire
+msgid "School children management"
+msgstr "Groupe inscription scolaire"
+
+#. module: ecole
+#: model:ir.ui.view,arch_db:ecole.student_view_search
+msgid "School establishment"
+msgstr "Établissement scolaire"
+
+#. module: ecole
+#: model:ir.ui.view,arch_db:ecole.student_view_search
+msgid "School level"
+msgstr "Niveau scolaire"
+
+#. module: ecole
+#: model:ir.ui.view,arch_db:ecole.School_tab
+#: model:ir.ui.view,arch_db:ecole.halfpension_view_form
+#: model:ir.ui.view,arch_db:ecole.nursery_view_form
+#: model:ir.ui.view,arch_db:ecole.student_view_form
+msgid "School registration"
+msgstr "Inscription scolaire"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_years_school_years
+#: model:ir.ui.view,arch_db:ecole.student_view_search
+msgid "School year"
+msgstr "Année scolaire"
+
+#. module: ecole
+#: model:ir.actions.act_window,name:ecole.student_update_action
+msgid "School year pass"
+msgstr "Passage de fin d'année scolaire"
+
+#. module: ecole
+#: model:ir.ui.menu,name:ecole.ecole_listanneescolaire
+msgid "School years"
+msgstr "Années scolaires"
+
+#. module: ecole
+#: model:res.groups,comment:ecole.group_ecole_inscription_scolaire
+msgid "Standard Group for School Registration Management."
+msgstr "Groupe standard pour les inscriptions scolaires."
+
+#. module: ecole
+#: model:res.groups,comment:ecole.group_ecole_garderie
+msgid "Standard group for day care management."
+msgstr "Groupe standard pour les garderies."
+
+#. module: ecole
+#: model:res.groups,comment:ecole.group_ecole_restauration_scolaire
+msgid "Standard group for the management of school meals."
+msgstr "Groupe standards pour la restauration scolaire."
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_halfpension_update_begin_date
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_half_pension_begin_date
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_nursery_begin_date
+msgid "Start"
+msgstr "Début"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_years_year_begin_date
+msgid "Start date"
+msgstr "Date de début"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_status_ws
+msgid "Statut"
+msgstr "Statut"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_student_update_student_ids
+msgid "Student ids"
+msgstr "Liste des élèves"
+
+#. module: ecole
+#: model:ir.actions.act_window,name:ecole.cantinelist
+msgid "Student school meals list"
+msgstr "Liste élèves - restauration scolaire"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_halfpension_update_student_ids
+msgid "Students"
+msgstr "Élèves"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_half_pension_thursday
+msgid "Thursday"
+msgstr "Jeudi"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_nursery_thursday_evening
+msgid "Thursday evening"
+msgstr "Jeudi soir"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_nursery_thursday_morning
+msgid "Thursday morning"
+msgstr "Jeudi matin"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_resp_town1
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_resp_town2
+msgid "Town"
+msgstr "Ville"
+
+#. module: ecole
+#: model:ir.ui.view,arch_db:ecole.School_tab
+msgid "Tree_view_school"
+msgstr "Tree_view_school"
+
+#. module: ecole
+#: model:ir.ui.view,arch_db:ecole.student_update_halfpension_view
+#: model:ir.ui.view,arch_db:ecole.student_update_view
+msgid "Tree_view_update_student"
+msgstr "Tree_view_update_student"
+
+#. module: ecole
+#: model:ir.ui.view,arch_db:ecole.school_years_view_tree
+msgid "Tree_years_school"
+msgstr "Tree_years_school"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_half_pension_tuesday
+msgid "Tuesday"
+msgstr "Mardi"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_nursery_tuesday_evening
+msgid "Tuesday evening"
+msgstr "Mardi soir"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_nursery_tuesday_morning
+msgid "Tuesday morning"
+msgstr "Mardi matin"
+
+#. module: ecole
+#: model:ir.module.category,description:ecole.ecole_category
+msgid "User access level for this module"
+msgstr "Niveau d'accès utilisateur pour ce module"
+
+#. module: ecole
+#: model:ir.ui.view,arch_db:ecole.student_update_view
+msgid "Vous allez faire un passage de fin d'année. Continuer ?"
+msgstr "Vous allez faire un passage de fin d'année. Continuer ?"
+
+#. module: ecole
+#: model:ir.ui.view,arch_db:ecole.student_update_halfpension_view
+msgid "Vous validez votre choix ?"
+msgstr "Vous validez votre choix ?"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_half_pension_wednesday
+msgid "Wednesday"
+msgstr "Mercredi"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_nursery_wednesday_evening
+msgid "Wednesday evening"
+msgstr "Mercredi soir"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_nursery_wednesday_morning
+msgid "Wednesday morning"
+msgstr "Mercredi matin"
+
+#. module: ecole
+#: model:ir.model,name:ecole.model_button_demo
+msgid "button.demo"
+msgstr "button.demo"
+
+#. module: ecole
+#: model:ir.model,name:ecole.model_crm_won_lost_report
+msgid "crm.won.lost.report"
+msgstr "crm.won.lost.report"
+
+#. module: ecole
+#: model:ir.model,name:ecole.model_ecole_halfpension_school
+msgid "ecole.halfpension.school"
+msgstr "ecole.halfpension.school"
+
+#. module: ecole
+#: model:ir.model,name:ecole.model_ecole_halfpension_update
+msgid "ecole.halfpension.update"
+msgstr "ecole.halfpension.update"
+
+#. module: ecole
+#: model:ir.model,name:ecole.model_ecole_nursery_school
+msgid "ecole.nursery.school"
+msgstr "ecole.nursery.school"
+
+#. module: ecole
+#: model:ir.model,name:ecole.model_ecole_partner_school
+msgid "ecole.partner.school"
+msgstr "ecole.partner.school"
+
+#. module: ecole
+#: model:ir.model,name:ecole.model_ecole_partner_school_update
+msgid "ecole.partner.school.update"
+msgstr "ecole.partner.school.update"
+
+#. module: ecole
+#: model:ir.model,name:ecole.model_ecole_partner_school_years
+msgid "ecole.partner.school.years"
+msgstr "ecole.partner.school.years"
+
+#. module: ecole
+#: model:ir.model,name:ecole.model_ecole_student_update
+msgid "ecole.student.update"
+msgstr "ecole.student.update"
+
+#. module: ecole
+#: model:ir.ui.view,arch_db:ecole.School_tab
+#: model:ir.ui.view,arch_db:ecole.halfpension_view_form
+#: model:ir.ui.view,arch_db:ecole.student_view_form
+msgid "example : diet, food allergy, ..."
+msgstr "exemple : régime alimentaire, allergie, ..."
+
+#. module: ecole
+#: model:ir.model,name:ecole.model_horanet_school_establishment
+msgid "horanet.school.establishment"
+msgstr "horanet.school.establishment"
+
+#. module: ecole
+#: model:ir.model,name:ecole.model_horanet_school_grade
+msgid "horanet.school.grade"
+msgstr "horanet.school.grade"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_horanet_school_grade_id_class
+msgid "idClasse"
+msgstr "idClasse"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_horanet_school_establishment_id_establishment
+msgid "idEtablissement"
+msgstr "idEtablissement"
+
+#. module: ecole
+#: model:ir.model.fields,field_description:ecole.field_ecole_partner_school_half_pension_previous
+msgid "previously registered"
+msgstr "Précédemment inscrit"
+
+#. module: ecole
+#: model:ir.model,name:ecole.model_school_age
+msgid "school.age"
+msgstr "school.age"
+
+#. module: ecole
+#: model:ir.ui.view,arch_db:ecole.halfpension_view_form
+msgid "school_halfpension_form"
+msgstr "school_halfpension_form"
+
+#. module: ecole
+#: model:ir.ui.view,arch_db:ecole.halfpension_view_tree
+msgid "school_halfpension_tree"
+msgstr "school_halfpension_tree"
+
+#. module: ecole
+#: model:ir.ui.view,arch_db:ecole.nursery_view_form
+msgid "school_nursery_form"
+msgstr "school_nursery_form"
+
+#. module: ecole
+#: model:ir.ui.view,arch_db:ecole.nursery_view_tree
+msgid "school_nursery_tree"
+msgstr "school_nursery_tree"
+
+#. module: ecole
+#: model:ir.ui.view,arch_db:ecole.student_view_form
+msgid "school_student_form"
+msgstr "school_student_form"
+
+#. module: ecole
+#: model:ir.ui.view,arch_db:ecole.student_view_tree
+msgid "school_student_tree"
+msgstr "school_student_tree"
+
+#. module: ecole
+#: model:ir.model,name:ecole.model_student_wizard
+msgid "student.wizard"
+msgstr "student.wizard"
+
+#. module: ecole
+#: model:ir.model,name:ecole.model_test_test
+msgid "test.test"
+msgstr "test.test"
+

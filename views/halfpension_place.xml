@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+<!--        <record id="act_halfpension_form_view" model="ir.actions.act_window.view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="halfpension_view_form"/>
+            <field name="act_window_id" ref="ecole.cantinelist"/>
+        </record>
+
+        <record id="act_halfpension_tree_view" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="halfpension_view_tree"/>
+            <field name="act_window_id" ref="ecole.cantinelist"/>
+        </record>-->
+
+        <record model='ir.actions.act_window' id='ecole.halfpension_place'>
+            <field name="name">School catering place</field>
+            <field name="res_model">ecole.halfpension.school</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+</odoo>
